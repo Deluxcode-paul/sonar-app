@@ -1,0 +1,39 @@
+@media (min-width: 770px) {
+    img.right {
+        position: absolute;
+        top: 10%;
+        left: 60%;
+    }
+
+    img.left {
+        position: absolute;
+        top: 10%;
+        right: 60%;
+    }
+
+    img.mobile {
+        display: none;
+    }
+
+    img.desktop {
+        display: block;
+    }
+}
+
+@media (max-width: 770px) {
+    img.right.mobile {
+        display: block;
+        margin-top: -50px;
+        margin-bottom: 3em;
+    }
+
+    img.left.mobile {
+        display: block;
+        padding-top: 4em;
+        padding-bottom: 0px;
+    }
+
+    img.desktop {
+        display: none;
+    }
+}

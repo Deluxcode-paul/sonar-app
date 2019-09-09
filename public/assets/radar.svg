@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3079" height="3079" viewBox="0 0 3079 3079">
+  <defs>
+    <linearGradient id="radar_illustration-a" x1="10.149%" x2="87.802%" y1="73.271%" y2="86.685%">
+      <stop offset="0%" stop-color="#161D2C" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#161D2C"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="1539.397" cy="1539.397" r="1539.397" fill="#161D2C" fill-opacity=".044"/>
+    <circle cx="1539" cy="1539.169" r="1325.897" fill="#161D2C" fill-opacity=".044"/>
+    <circle cx="1539" cy="1539.169" r="979.897" fill="#161D2C" fill-opacity=".044"/>
+    <circle cx="1539" cy="1539.169" r="736.897" fill="#161D2C" fill-opacity=".101"/>
+    <circle cx="1539" cy="1539.169" r="545.897" fill="#161D2C" fill-opacity=".101"/>
+    <circle cx="1539" cy="1539.169" r="363" fill="#161D2C" fill-opacity=".101"/>
+    <circle cx="1539" cy="1539.169" r="236.342" fill="#161D2C" fill-opacity=".101"/>
+    <path fill="url(#radar_illustration-a)" d="M1527.83203,1542.98348 C1527.83203,1542.98348 2597.57525,500.878137 2629.9664,453.418362 C2412.39466,236.589364 2129.6117,85.3832167 1813.67522,31.9196815 C1812.94474,30.1644914 1527.83203,1542.98348 1527.83203,1542.98348 Z" opacity=".513"/>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+	.s-desktop {
+		display: none
+	}
+	.s-laptop {
+		display: none
+	}
+	.s-tablet {
+		display: none
+	}
+	.s-tablet-sm {
+		display: none
+	}
+	.s-mobile {
+		display: none
+	}
+
+
+@media (min-width: 1279px) and (max-width: 9999px) {
+	.s-desktop {
+		display: block !important
+	}
+}
+
+@media (min-width: 767px) and (max-width: 1279px) {
+	.s-laptop {
+		display: block !important
+	}
+}
+
+@media (min-width: 599px) and (max-width: 767px) {
+	.s-tablet {
+		display: block !important
+	}
+}
+
+@media (max-width: 599px) and (min-width: 424px) {
+	.s-tablet-sm {
+		display: block !important
+	}
+}
+
+@media (max-width: 424px) and (min-width: 0px) {
+	.s-mobile {
+		display: block !important
+	}
+}
+
