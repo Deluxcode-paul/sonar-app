@@ -1,10 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
+import vuetify from '@/plugins/vuetify'
 
-Vue.use(Vuetify);
 
 
 // parallax
@@ -64,6 +62,7 @@ router.beforeEach((to, from, next) => {
 });
 
 new Vue({
+    vuetify,
     router,
     render: h => h(App)
 }).$mount('#app')

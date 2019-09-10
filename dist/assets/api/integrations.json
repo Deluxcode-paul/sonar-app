@@ -1,0 +1,591 @@
+{
+    "integrations": [
+    {
+        "name": "Bluepay",
+        "url": "https://www.bluepay.com",
+        "category": "eCheck Payments",
+        "countries": "United States, Canada",
+        "logo": "bluepay.png"
+    },
+    {
+        "name": "Authorize.Net",
+        "url": "https://www.authorize.net",
+        "category": "eCheck Payments",
+        "countries": "United States, Canada, Australia, United Kingdom, Europe",
+        "logo": "authorizenet.png"
+    },
+    {
+        "name": "Propay Protect Pay",
+        "url": "https://www.propay.com/en-US/",
+        "category": "eCheck Payments",
+        "countries": "United States, Canada, Australia, New Zealand",
+        "logo": "propayprotectpay.png"
+    },
+    {
+        "name": "Card Connect",
+        "url": "https://www.cardconnect.com",
+        "category": "eCheck Payments",
+        "countries": "United States, Canada",
+        "logo": "cardconnect.png"
+    },
+    {
+        "name": "IpPay",
+        "url": "https://www.ippay.com",
+        "category": "eCheck Payments",
+        "countries": "United States, Canada, International",
+        "logo": "ippay.png"
+    },
+    {
+        "name": "GoCardless",
+        "url": "https://www.gocardless.com",
+        "category": "eCheck Payments",
+        "countries": "United States, Canada, Australia, Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Finland, France, Germany, Hungary, Italy, Luxembourg, Malta, Netherlends, New Zealand, Norway, Poland, Portugal, Republic of Ireland, Romania, Slovakia, Slovenia, South Africa, Spain, Sweden, Switzerland",
+        "logo": "gocardless.png"
+    },
+    {
+        "name": "NACHA PPD",
+        "url": "https://www.nacha.org",
+        "category": "ACH Payments",
+        "countries": "Canada",
+        "logo": "nachappd.png"
+    },
+    {
+        "name": "Canada 1464 Byte EFT/COA 005",
+        "url": "None",
+        "category": "ACH Payments",
+        "countries": "Canada",
+        "logo": "None"
+    },
+    {
+        "name": "Central 1 SCH Standard",
+        "url": "None",
+        "category": "ACH Payments",
+        "countries": "Canada",
+        "logo": "None"
+    },
+    {
+        "name": "Royal Bank of Canada 1564 Byte EFT",
+        "url": "None",
+        "category": "ACH Payments",
+        "countries": "Canada",
+        "logo": "None"
+    },
+    {
+        "name": "BMO Harris Canada 80 Byte EFT",
+        "url": "None",
+        "category": "ACH Payments",
+        "countries": "Canada",
+        "logo": "None"
+    },
+    {
+        "name": "Authorize.Net CIM",
+        "url": "https://www.authorize.net",
+        "category": "Credit Card Payments",
+        "countries": "United States, Canada, Australia, United Kingdom, Europe",
+        "logo": "authorizenet.png"
+    },
+    {
+        "name": "Bambora (Beanstream)",
+        "url": "https://bambora.com",
+        "category": "Credit Card Payments",
+        "countries": "United States, Canada, International",
+        "logo": "bambora.png"
+    },
+    {
+        "name": "Bluepay",
+        "url": "https://www.bluepay.com",
+        "category": "Credit Card Payments",
+        "countries": "United States, Canada",
+        "logo": "bluepay.png"
+    },
+    {
+        "name": "Card Connect",
+        "url": "https://www.cardconnect.com",
+        "category": "Credit Card Payments",
+        "countries": "United States, Canada",
+        "logo": "cardconnect.png"
+    },
+    {
+        "name": "IpPay",
+        "url": "https://www.ippay.com",
+        "category": "Credit Card Payments",
+        "countries": "United States, Canada, International",
+        "logo": "ippay.png"
+    },
+    {
+        "name": "Moneris eSELECT Vault",
+        "url": "https://www3.moneris.com",
+        "category": "Credit Card Payments",
+        "countries": "United States, Canada",
+        "logo": "moneris.png"
+    },
+    {
+        "name": "Paygate",
+        "url": "https://www.paygate.co.za",
+        "category": "Credit Card Payments",
+        "countries": "Australia, Austria, Beglium, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Ireland, Israel, Italy, Lithuania, Luxembourg, Moldova, Netherlands, Norway, Poland, Portugal, Slovakia, Spain, Sweden, Switzerland, United Kingdom, Zambia",
+        "logo": "paygate.png"
+    },
+    {
+        "name": "Propay Protect Pay",
+        "url": "https://www.propay.com/en-US/",
+        "category": "Credit Card Payments",
+        "countries": "United States, Canada, Australia, New Zealand",
+        "logo": "propayprotectpay.png"
+    },
+    {
+        "name": "Stripe",
+        "url": "https://www.stripe.com",
+        "category": "Credit Card Payments",
+        "countries": "United States, Canada, Australia, Belgium, Denmark, Finland, France, Germany, Hong Kong, Ireland, Italy, Japan, Luxembourg, Netherlands, New Zealand, Norway, Portugal, Singapore, Spain, Sweden, Switzerland, United Kingdom",
+        "logo": "stripe.png"
+    },
+    {
+        "name": "Chase Paymentech",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "Elavon",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "First Data Merchant Services",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "First Data Omaha",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "First Data Nashville",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "Global Payments",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "Heartland Payment Systems",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "TSYS Acquiring Solutions",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States",
+        "logo": "None"
+    },
+    {
+        "name": "Heritage WorldPay",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States",
+        "logo": "None"
+    },
+    {
+        "name": "Vantiv / WorldPay Core",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "EVOSnap",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "NAB EPX",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "FdiAus",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada, Australia, New Zealand",
+        "logo": "None"
+    },
+    {
+        "name": "WestPac",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "Austrailia",
+        "logo": "None"
+    },
+    {
+        "name": "NAB EPX",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada",
+        "logo": "None"
+    },
+    {
+        "name": "AIBMS",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada, United Kingdom, Europe",
+        "logo": "None"
+    },
+    {
+        "name": "AmexDirect",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Canada, United Kingdom, Europe",
+        "logo": "None"
+    },
+    {
+        "name": "Barclays",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United Kingdom, Europe",
+        "logo": "None"
+    },
+    {
+        "name": "Cardnet",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United Kingdom",
+        "logo": "None"
+    },
+    {
+        "name": "HBOS",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United Kingdom",
+        "logo": "None"
+    },
+    {
+        "name": "HBOS",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United Kingdom",
+        "logo": "None"
+    },
+    {
+        "name": "HSBC",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, United Kingdom, Europe",
+        "logo": "None"
+    },
+    {
+        "name": "Streamline",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, United Kingdom, Europe, Australia",
+        "logo": "None"
+    },
+    {
+        "name": "EVOSnap",
+        "url": "https://www.authorize.net",
+        "category": "Authorize.Net Processors",
+        "countries": "United States, Europe, United Kingdom, Czech Republic, Denmark, Norway, Sweden, Poland",
+        "logo": "None"
+    },
+    {
+        "name": "Avalara",
+        "url": "https://www.avalara.com",
+        "category": "Tax Service",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Market Broadband",
+        "url": "https://www.marketbroadband.com",
+        "category": "Payment Processor",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Preseem",
+        "url": "https://www.preseem.com",
+        "category": "Network Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Tower Coverage",
+        "url": "www.towercoverage.com",
+        "category": "Network Mapping",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "MailXStream",
+        "url": "https://mailxstream.com",
+        "category": "Print to Mail",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Saisei",
+        "url": "https://www.saisei.com",
+        "category": "Network Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Sandvine",
+        "url": "https://www.sandvine.com",
+        "category": "Network Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Incognito",
+        "url": "https://www.incognito.com",
+        "category": "Cable Intergrations",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Track Your Truck",
+        "url": "https://www.trackyourtruck.com",
+        "category": "GPS Tracking",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Verizon Network Fleet",
+        "url": "https://www.verizonconnect.com/ca/",
+        "category": "GPS Tracking",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "ZubieCar",
+        "url": "https://zubie.com",
+        "category": "GPS Tracking",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Tom Tom",
+        "url": "https://www.tomtom.com/en_ca/",
+        "category": "GPS Tracking",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Wex",
+        "url": "https://www.wexinc.com",
+        "category": "GPS Tracking",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Linxup",
+        "url": "https://www.linxup.com",
+        "category": "GPS Tracking",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Twillio",
+        "url": "https://twilio.com",
+        "category": "SMS Messaging",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Go Care",
+        "url": "https://www.nuteqsolutions.com/solutions/gocare/",
+        "category": "SMS Messaging",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Mail Chimp",
+        "url": "https://mailchimp.com",
+        "category": "Email Marketing",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Constant Contact",
+        "url": "https://www.constantcontact.com/ca/index.jsp",
+        "category": "SMS Messaging",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Cambium",
+        "url": "https://www.cambiumnetworks.com",
+        "category": "Equipment Integrations",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Mimosa",
+        "url": "https://www.mimosa.org",
+        "category": "Equipment Integrations",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Telrad",
+        "url": "https://www.telrad.com",
+        "category": "Equipment Integrations",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Baicells",
+        "url": "https://na.baicells.com",
+        "category": "Equipment Integrations",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Mikrotik",
+        "url": "https://mikrotik.com",
+        "category": "Equipment Integrations",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Ubiquiti",
+        "url": "https://www.ubnt.com/products/#airfiber",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Cisco",
+        "url": "https://www.cisco.com/c/en_ca/index.html",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "HP",
+        "url": "https://hp.com",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Netonics",
+        "url": "https://www.netonix.com/wisp-switch.html",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "BCE",
+        "url": "http://www.bce.ca",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Linksys",
+        "url": "https://www.linksys.com/us/",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "D-Link",
+        "url": "https://ca.dlink.com",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Juniper",
+        "url": "https://www.juniper.net/us/en/",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Dell",
+        "url": "https://www.dell.com/en-ca",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "TP Link",
+        "url": "https://www.tp-link.com/ca/",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Luxul",
+        "url": "https://www.luxul.com",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "ReadyNet",
+        "url": "http://www.readynetsolutions.com",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "TRENDnet",
+        "url": "https://www.trendnet.com",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Comtrend",
+        "url": "https://www.comtrend.com",
+        "category": "Equipment Monitoring",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Microsoft Airband Initiative",
+        "url": "https://www.microsoft.com",
+        "category": "Partner",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Microsoft Cloud",
+        "url": "https://www.microsoft.com",
+        "category": "Partner",
+        "countries": "",
+        "logo": "None"
+    },
+    {
+        "name": "Microsoft Airband Initiative",
+        "url": "https://www.microsoft.com",
+        "category": "Partner",
+        "countries": "",
+        "logo": "None"
+    }]
+}

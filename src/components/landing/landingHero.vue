@@ -6,7 +6,7 @@
             ? 'container grid-2 gap-large center fade visible hero'
             : 'container grid-2 gap-large center fade not-visible hero'
         ]">
-                <div style="z-index: 1" class="align-center-laptop width-s-tablet margin-s-top center-block-laptop">
+                <div style="z-index: 1" class="landingHero align-center-laptop width-s-tablet margin-s-top center-block-laptop">
                     <h1 class="mobile-small padding-xs-bottom headline-lead" :style="titleStyle">{{ title }}</h1>
                     <p class="lead color-silver hide-tablet">
                         {{ desktopBody }}
@@ -14,8 +14,8 @@
                     <p class="lead color-silver show-tablet">
                         {{ mobileBody }}
                     </p>
-                    <router-link v-if="page !== 'Enterprise'" :to="ctaPage" class="margin-s-top button deepblue big input-xl">
-                        {{ ctaBody }}
+                    <router-link v-if="page !== 'Enterprise'" :to="ctaPage" class="">
+                       <v-btn>{{ctaBody}}</v-btn>
                     </router-link>
                 </div>
                 <div class="background-video show-desktop">
@@ -111,7 +111,27 @@ export default {
 }
 </script>
 
+<style>
+    .landingHero .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+        color: #fff;
+        background: #07f;
+        height: 50px;
+        cursor: pointer;
+        animation: bookDemoShadow 5s ease infinite;
+    }
 
+    @keyframes bookDemoShadow {
+        0% {
+            box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
+        }
+        50% {
+            box-shadow: 0 0 80px rgba(255, 255, 255, 0.8);
+        }
+        100% {
+            box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
+        }
+    }
+</style>
 <style scoped>
 
 p.lead {

@@ -19,9 +19,9 @@
 	import sonarNav from '@/components/sonarNav';
 	import sonarFooter from '@/components/sonarFooter';
 	import landingCTA from '@/components/landing/landingCTA';
-	import blogCard from '@/components/blog/blogCard';
-	import blogVideoCard from '@/components/blog/blogVideoCard';
-	import blogNav from '@/components/blog/blogNav.vue';
+	// import blogCard from '@/components/blog/blogCard';
+	// import blogVideoCard from '@/components/blog/blogVideoCard';
+	// import blogNav from '@/components/blog/blogNav.vue';
 	import blogLayout from '@/components/blog/blogLayout.vue';
 
 	export default {
@@ -30,10 +30,7 @@
 			sonarNav,
 			sonarFooter,
 			landingCTA,
-			blogCard,
-			blogNav,
 			blogLayout,
-			blogVideoCard
 		}
 	}
 </script>

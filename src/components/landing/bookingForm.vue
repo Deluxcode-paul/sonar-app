@@ -60,18 +60,18 @@
     </div>
 </template>
 <script>
-    import sonarNav from '@/components/sonarNav.vue';
-    import sonarFooter from '@/components/sonarFooter.vue';
-    import landingFeatureRtl from '@/components/landing/landingFeatureRtl.vue'
+    // import sonarNav from '@/components/sonarNav.vue';
+    // import sonarFooter from '@/components/sonarFooter.vue';
+    // import landingFeatureRtl from '@/components/landing/landingFeatureRtl.vue'
     import VueSingleSelect from "vue-single-select";
 
 
     export default {
         name: 'bokingForm',
         components: {
-            sonarNav,
-            sonarFooter,
-            landingFeatureRtl,
+            // sonarNav,
+            // sonarFooter,
+            // landingFeatureRtl,
             VueSingleSelect
         },
         data() {

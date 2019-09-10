@@ -37,32 +37,24 @@
     import sonarNav from "@/components/sonarNav.vue";
     import sonarFooter from "@/components/sonarFooter.vue";
     import landingHero from "@/components/landing/landingHero.vue";
-    import landingLogos from "@/components/landing/landingLogos.vue";
-    import landingQuote from "@/components/landing/landingQuote.vue";
-    import landingFeature from "@/components/landing/landingFeature.vue";
-    import landingCTA from "@/components/landing/landingCTA.vue";
-    import landingDemoCards from "@/components/landing/landingDemoCards.vue";
+    // import landingLogos from "@/components/landing/landingLogos.vue";
+    // import landingQuote from "@/components/landing/landingQuote.vue";
+    // import landingFeature from "@/components/landing/landingFeature.vue";
+    // import landingCTA from "@/components/landing/landingCTA.vue";
+    // import landingDemoCards from "@/components/landing/landingDemoCards.vue";
     // import landingCaseForm from "@/components/landing/landingCaseForm.vue";
-    import features from '@/components/home/features.vue';
-    import landingCode from "@/components/landing/landingCode.vue";
-    import landingCodeForm from "@/components/landing/landingCodeForm.vue";
+    // import features from '@/components/home/features.vue';
+    // import landingCode from "@/components/landing/landingCode.vue";
+    // import landingCodeForm from "@/components/landing/landingCodeForm.vue";
     import bookingForm from "@/components/landing/bookingForm.vue";
 
     export default {
         name: "Enterprise",
         components: {
             sonarNav,
-            landingDemoCards,
             sonarFooter,
             landingHero,
-            landingLogos,
-            landingQuote,
-            landingCTA,
             // landingCaseForm,
-            landingFeature,
-            features,
-            landingCode,
-            landingCodeForm,
             bookingForm
         }
     };
