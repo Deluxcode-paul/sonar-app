@@ -1,10 +1,6 @@
 <template>
   <section :class="classNames">
-      <div :class="[
-        cssMagic
-          ? 'feature-block-vertical color-black fade fade-children visible'
-          : 'feature-block-vertical color-black fade fade-children'
-      ]">
+      <div class="feature-block-vertical color-black fade fade-children visible">
         <h2 class="width-l" style="margin-bottom: 0.8em;">{{ title }}</h2>
         <div class="copy">
           <p class="lead" style="margin-bottom: 1.2em;">{{ body }}</p>
@@ -43,13 +39,17 @@
         </div>
 
         <intersect @enter="videoPlay" @leave="videoPause">
-          <div style="min-height: 900px">
+          <div style="min-height: 700px">
             <transition
                     v-bind:enter-active-class="animation"
                     v-bind:leave-active-class="animation"
             >
-              <div class="visual" v-if="show">
-                <img src="../../../public/assets/casestudybook.png" alt="">
+              <div class="visual whitned" v-if="show">
+                  <video height="690px" width="100%" ref="motionGraphic" autoplay muted playsinline>
+                      <source v-if="video === 'BillingRecovered'" src="../../../public/assets/video/cable/BillingLong.mp4" type="video/mp4" />
+                      <source v-if="video === 'Provisioning'" src="../../../public/assets/video/cable/Provisioning.mp4" type="video/mp4" />
+                      <source v-if="video === 'Network'" src="../../../public/assets/video/cable/NetworkLong.mp4" type="video/mp4" />
+                  </video>
               </div>
             </transition>
           </div>
@@ -140,8 +140,31 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-      min-height: 930px;
+      height: 770px;
+      padding: 40px 0;
   }
+  .whitned {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      height: 770px;
+  }
+
+  .whitned::before {
+      width: 100%;
+      height: 690px;
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+      z-index: 1;
+  }
+
   img {
       min-width: 720px;
       min-height: 760px;
@@ -165,12 +188,14 @@
 .cta:hover svg {
     transform: scale(1.1)
 }
-
+  .feature-block-vertical {
+      padding: 30px 0 !important;
+  }
 
   .feature-block-vertical>* {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
   }
 
   @media (max-width: 600px) {

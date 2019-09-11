@@ -2,7 +2,7 @@
 
     <body class="nav-deepblue">
         <sonarNav />
-        <landingFeatureRtl :showButton="false" :enableAnimations="false" classNames="bg-deepblue color-white padding-l-left padding-m-top" video="v1" title="Book a demo." body="You're only a few steps away from giving Sonar a try for yourself. We'll walk you through how Sonar will help improve your productivity and day-to-day flow for you and your entire team." />
+        <landingFeatureRtl :showButton="false" :enableAnimations="false" classNames="bg-deepblue color-white padding-l-left padding-m-top" video="v1" title="See Sonar in action." body="You're only a few steps away from giving Sonar a try for yourself. We'll walk you through how Sonar will help improve your productivity and day-to-day flow for you and your entire team." />
         <div class="padding-s-bottom container margin-s-top margin-m-bottom">
             <div v-if="step == 1" class="container form width-s padding-s-all">
                 <div>

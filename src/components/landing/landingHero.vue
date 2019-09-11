@@ -20,9 +20,8 @@
                 </div>
                 <div class="background-video show-desktop">
                     <intersect @enter="videoPlay" @leave="videoPause">
-                        <video height="100%" width="auto" ref="motionGraphic" autoplay muted playsinline>
-                            <source :src="[this.$isMobile() ? webmUrlSmall : webmUrl]" type="video/webm" />
-                            <source :src="[this.$isMobile() ? mp4UrlSmall : mp4Url]" type="video/mp4" />
+                        <video height="auto" width="505px" ref="motionGraphic" autoplay muted playsinline>
+                            <source src="../../../public/assets/video/cable/Network_2.mp4" type="video/mp4" />
                         </video>
                     </intersect>
                 </div>
@@ -158,15 +157,16 @@ p.lead {
 
 .background-video video {
     position: absolute;
-    width: 1080px;
-    top: 0;
-    left: -300px;
+    width: 505px;
+    top: 160px;
+    bottom: 0;
+    /*left: -300px;*/
     overflow: hidden;
 }
 
 video {
-    max-width: 1080px !important;
-    min-width: 800px !important;
+    max-width: 505px !important;
+    min-width: 505px !important;
 }
 
 .hero {

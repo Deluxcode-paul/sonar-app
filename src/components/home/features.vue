@@ -2,7 +2,7 @@
     <section class="big">
         <div class="hero">
             <div class="center features">
-                <h2 class="color-white margin-m-bottom">Packed with features.</h2>
+                <h2 class="color-white">Packed with features.</h2>
                 <div class="flex-center">
                     <div class="full darkened">
 
@@ -469,8 +469,8 @@
     .hero {
         position: relative;
         max-width: 100%;
-        padding-top: 5em;
-        padding-bottom: 5em;
+        padding-top: 20px;
+        padding-bottom: 20px;
         margin: 0px auto;
         border-radius: 3em;
         background-color: rgb(0, 0, 0);
@@ -483,7 +483,7 @@
     }
 
     .description {
-        margin: 90px auto;
+        margin: 10px auto 40px;
         max-width: 1280px;
         font-size: 1.1em;
         letter-spacing: 0px;
