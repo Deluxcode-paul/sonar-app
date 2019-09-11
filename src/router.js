@@ -180,6 +180,24 @@ export default new Router({
                 // ]
             }
         },
+        //whySonar
+        {
+            path: '/whySonar',
+            name: 'WhySonar',
+            component: loadView('WhySonar'),
+            meta: {
+                title: 'Sonar Billing & OSS + Casts',
+                // metaTags: [{
+                //         name: 'description',
+                //         content: 'The home page of our example app.'
+                //     },
+                //     {
+                //         property: 'og:description',
+                //         content: 'The home page of our example app.'
+                //     }
+                // ]
+            }
+        },
 
         // blog
         {

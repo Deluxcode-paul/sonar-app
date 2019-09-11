@@ -1,6 +1,6 @@
 <template>
   <div class="padding-s-top padding-m-bottom margin-s-top">
-    <h2 class="color-white">Developer friendly API</h2>
+    <h2 class="color-white">Make Sonar your own</h2>
     <div class="grid-features">
       <div class="grid-feature">
         <div class="grid-inner">
@@ -9,7 +9,7 @@
               d="M12 0c-6.627 0-12 5.373-12 12 0 6.29 4.842 11.44 11 11.95v-9.133c-1.162-.414-2-1.513-2-2.817 0-1.657 1.344-3 3-3s3 1.343 3 3c0 1.304-.838 2.403-2 2.816v9.133c6.158-.51 11-5.66 11-11.95 0-6.626-5.373-11.999-12-11.999zm-5.282 12c0 1.791.887 3.397 2.282 4.498l-1.481 1.502c-1.86-1.467-3.04-3.608-3.04-6s1.18-4.533 3.04-6l1.481 1.502c-1.396 1.101-2.282 2.707-2.282 4.498zm9.763 6l-1.481-1.502c1.396-1.101 2.282-2.707 2.282-4.498s-.886-3.397-2.282-4.498l1.481-1.502c1.86 1.467 3.04 3.608 3.04 6s-1.179 4.533-3.04 6z">
             </path>
           </svg>
-          <p>GraphQL</p>
+          <p>Adaptable</p>
         </div>
       </div>
       <div class="grid-feature">
@@ -29,14 +29,14 @@
               d="M12 0c-6.627 0-12 5.373-12 12 0 6.29 4.842 11.44 11 11.95v-9.133c-1.162-.414-2-1.513-2-2.817 0-1.657 1.344-3 3-3s3 1.343 3 3c0 1.304-.838 2.403-2 2.816v9.133c6.158-.51 11-5.66 11-11.95 0-6.626-5.373-11.999-12-11.999zm-5.282 12c0 1.791.887 3.397 2.282 4.498l-1.481 1.502c-1.86-1.467-3.04-3.608-3.04-6s1.18-4.533 3.04-6l1.481 1.502c-1.396 1.101-2.282 2.707-2.282 4.498zm9.763 6l-1.481-1.502c1.396-1.101 2.282-2.707 2.282-4.498s-.886-3.397-2.282-4.498l1.481-1.502c1.86 1.467 3.04 3.608 3.04 6s-1.179 4.533-3.04 6z">
             </path>
           </svg>
-          <p>Adaptable</p>
+          <p>Developer-friendly</p>
         </div>
       </div>
     </div>
-    <p class="feature color-silver margin-m-bottom">The Sonar API is a comprehensive and powerful REST interface that allows you
-      to
-      integrate any external systems into Sonar that you need. Sonar also offers a selection of webhooks to allow you to
-      trigger external systems based on events inside Sonar.</p>
+    <p class="feature color-silver margin-m-bottom">
+      Our API allows you to sculpt Sonar to fit your needs. The GraphQL interface empowers you to integrate external systems at will.
+      We also offer a selection of webhooks, meaning you can trigger external systems based on events inside Sonar. Check out the Sonar API Link o API page
+    </p>
 
     <wideButton text="Check out Sonar's API" />
   </div>

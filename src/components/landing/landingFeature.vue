@@ -32,12 +32,26 @@
               {{ pageDemo }}
             </a>
           </div>
-<!--           <a href="#" class="cta icon">-->
-<!--              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path fill="#05f" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/></svg>-->
-<!--              Watch-->
-<!--            </a>-->
+            <div v-if="buttonTrueWatch">
+                <a :href="pageDemoUrl" class="cta icon">
+                    <svg width="26" height="26" style="margin-right: 3px">
+                        <path
+                                d="M 13 0 C 20.18 0 26 5.82 26 13 C 26 20.18 20.18 26 13 26 C 5.82 26 0 20.18 0 13 C 0 5.82 5.82 0 13 0 Z"
+                                fill="#05f"></path>
+                        <path
+                                d="M 12 7 C 12 6.448 12.448 6 13 6 L 13 6 C 13.552 6 14 6.448 14 7 L 14 17 C 14 17.552 13.552 18 13 18 L 13 18 C 12.448 18 12 17.552 12 17 Z"
+                                fill="hsl(0, 0%, 100%)"></path>
+                        <path d="M 9 15 L 13 19 L 17 15" fill="transparent" stroke-width="2" stroke="hsl(0, 0%, 100%)"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    {{ pageDemo }}
+                </a>
+                <a href="#" class="cta icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path fill="#05f" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/></svg>
+                    Watch
+                </a>
+            </div>
         </div>
-
         <intersect @enter="videoPlay" @leave="videoPause">
           <div style="min-height: 700px">
             <transition
@@ -49,6 +63,9 @@
                       <source v-if="video === 'BillingRecovered'" src="../../../public/assets/video/cable/BillingLong.mp4" type="video/mp4" />
                       <source v-if="video === 'Provisioning'" src="../../../public/assets/video/cable/Provisioning.mp4" type="video/mp4" />
                       <source v-if="video === 'Network'" src="../../../public/assets/video/cable/NetworkLong.mp4" type="video/mp4" />
+                      <source v-if="video === 'Dashboard'" src="../../../public/assets/video/fiber/Dashboard.mp4" type="video/mp4" />
+                      <source v-if="video === 'Multisoftware'" src="../../../public/assets/video/fiber/Multisoftware.mp4" type="video/mp4" />
+                      <source v-if="video === 'Mapping'" src="../../../public/assets/video/fiber/Mapping.mp4" type="video/mp4" />
                   </video>
               </div>
             </transition>
@@ -99,6 +116,7 @@
       pageDemoUrl: String,
       pageDemo: String,
       buttonTrue: Boolean,
+      buttonTrueWatch: Boolean,
       animation: String,
     },
     methods: {

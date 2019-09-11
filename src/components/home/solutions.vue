@@ -2,8 +2,8 @@
     <div class="container-l bg-gradient-goth" style="width: 100%">
         <div class="container grid-2">
             <div class="padding-xl-top">
-                <h3 class="color-white align-left">Meet your industry needs.</h3>
-                <p class="color-white width-s lead padding-s-top">We've designed Sonar from the ground up with your industry in mind. Now this is versatile.</p>
+                <h3 class="color-white align-left">Let’s talk about you.</h3>
+                <p class="color-white width-s lead padding-s-top"> Every one of our customers is different. Choose your sector from the list and see how Sonar will work to grow your business.</p>
                 <router-link to="demo" class="margin-s-top button deepblue big input-xl">
                     Schedule a demo
                 </router-link>

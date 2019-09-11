@@ -21,7 +21,8 @@
                 <div class="background-video show-desktop">
                     <intersect @enter="videoPlay" @leave="videoPause">
                         <video height="auto" width="505px" ref="motionGraphic" autoplay muted playsinline>
-                            <source src="../../../public/assets/video/cable/Network_2.mp4" type="video/mp4" />
+                            <source v-if="video !== 'HeadMapping'" src="../../../public/assets/video/cable/NetworkHero.mp4" type="video/mp4" />
+                            <source v-if="video === 'HeadMapping'" src="../../../public/assets/video/fiber/HeadMapping.mp4" type="video/mp4" />
                         </video>
                     </intersect>
                 </div>

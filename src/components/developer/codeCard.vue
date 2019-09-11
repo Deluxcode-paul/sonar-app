@@ -17,45 +17,45 @@ export default {
         return {
             example: `HTTP/1.1 201 OK
 {
-    "data": {
-        "id": 3,
-        "line1": "555 Packers Ln",
-        "line2": "Suite 1337",
-        "city": "Green Bay",
-        "state": "Wisconsin",
-        "county": "Green Bay Co.",
-        "zip": "54332",
-        "country": "US",
-        "latitude": null,
-        "longitude": null,
-        "address_type_id": 2
-    }
+ "data": {
+   "id": 3,
+    "line1": "555 Packers Ln",
+    "line2": "Suite 1337",
+    "city": "Green Bay",
+    "state": "Wisconsin",
+    "county": "Green Bay Co.",
+    "zip": "54332",
+    "country": "US",
+    "latitude": null,
+    "longitude": null,
+    "address_type_id": 2
+  }
 }
 
 POST /api/v1/accounts/bulk_granular_data_usage
 
 {
-    "data": [
-        {
-            "timestamp": 1451606400,
-            "in": 1,
-            "out": 3,
-            "data_source_identifier": "192.168.100.123",
-            "data_source_parent": "Router-01-Example.sonar.software",
-            "data_type": "Unknown",
-            "account_id": 12
-        },
-        {
-            "timestamp": 1451606460,
-            "in": 141,
-            "out": 1807,
-            "data_source_identifier": "192.168.100.123",
-            "data_source_parent": "Router-01-Example.sonar.software",
-            "data_type": "Unknown",
-            "account_id": 4938
-        }
-    ]
- }
+ "data": [
+   {
+     "timestamp": 1451606400,
+     "in": 1,
+     "out": 3,
+     "data_source_identifier": "192.168.100.123",
+     "data_source_parent": "Router-01-Example.sonar.software",
+     "data_type": "Unknown",
+     "account_id": 12
+   },
+   {
+     "timestamp": 1451606460,
+     "in": 141,
+     "out": 1807,
+     "data_source_identifier": "192.168.100.123",
+     "data_source_parent": "Router-01-Example.sonar.software",
+     "data_type": "Unknown",
+     "account_id": 4938
+   }
+ ]
+}
 `
         }
     }
