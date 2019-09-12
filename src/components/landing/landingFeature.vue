@@ -60,12 +60,7 @@
             >
               <div class="visual whitned" v-if="show">
                   <video height="690px" width="100%" ref="motionGraphic" autoplay muted playsinline>
-                      <source v-if="video === 'BillingRecovered'" src="../../../public/assets/video/cable/BillingLong.mp4" type="video/mp4" />
-                      <source v-if="video === 'Provisioning'" src="../../../public/assets/video/cable/Provisioning.mp4" type="video/mp4" />
-                      <source v-if="video === 'Network'" src="../../../public/assets/video/cable/NetworkLong.mp4" type="video/mp4" />
-                      <source v-if="video === 'Dashboard'" src="../../../public/assets/video/fiber/Dashboard.mp4" type="video/mp4" />
-                      <source v-if="video === 'Multisoftware'" src="../../../public/assets/video/fiber/Multisoftware.mp4" type="video/mp4" />
-                      <source v-if="video === 'Mapping'" src="../../../public/assets/video/fiber/Mapping.mp4" type="video/mp4" />
+                      <source :src="mp4Url" type="video/mp4" />
                   </video>
               </div>
             </transition>
@@ -139,10 +134,7 @@
       }
     },
     mounted: function () {
-      this.mp4Url = "/assets/motion/" + this.video + ".mp4"
-      this.webmUrl = "/assets/motion/" + this.video + ".webm"
-      this.mp4UrlSmall = "/assets/motion/" + this.video + "_small.mp4"
-      this.webmUrlSmall = "/assets/motion/" + this.video + "_small.webm"
+      this.mp4Url = "/assets/video/" + this.video + ".mp4";
 
       this.$nextTick(() => {
         this.cssMagic = false;

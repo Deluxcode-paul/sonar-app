@@ -5,9 +5,9 @@
             <sonarNav />
             <landingHero video="v2" title="Build a smarter, more efficient network." desktopBody="The Sonar platform is designed to help WISPs grow and maintain a healthy network. With intelligent automation, we’ll help you solve problems before they even arise." mobileBody="The Sonar platform is designed to help WISPs keep their network in good shape. With intelligent automation, we’ll help you solve problems before they even arise." ctaBody="Book a demo" ctaPage="/demo" classNames="code bg-black color-white padding-xl-top padding-l-bottom" titleStyle="font-size: 3.7em; line-height: 1.05em" />
             <landingLogos />
-            <landingFeature video="BillingRecovered" animation="animated fadeInRightBig" classNames="bg-white" title="Get the tools to grow" body="Managing a growing network can be difficult. Sonar is here to help. Our dynamic network mapping provides a clear, real-time visualization of your WISP network. The visualization isn’t just pretty – it provides a wealth of valuable information and key insights, giving you the tools you need to take your business to the next level." ctaPage="/demo" ctaBody="Book a Demo" />
-            <landingFeature video="Provisioning" animation="animated fadeInLeftBig" classNames="bg-paper-light" title="Billing and provisioning, together" body="With Sonar, all your data is in one place. So when a problem arises, the single, integrated interface lets you troubleshoot quicker than ever before. No more time wasted hopping around from one software to another. Everything’s right where you need it, giving you more time to focus on the things that matter – like growing your business." ctaPage="/demo" ctaBody="See Sonar in action" />
-            <landingFeature video="Network" animation="animated fadeInRightBig" classNames="bg-white" title="Wave goodbye to manual provisioning" body="Manual provisioning can be a slow, error-prone, and laborious process. So let’s automate it. Automated provisioning speeds things up at every level, for everyone from technicians to customers. The Sonar platform assigns IPs automatically, and relays key information to installers in real-time. The result is next-level efficiency." ctaPage="/pricing" ctaBody="See pricing" />
+            <landingFeature video="cable/BillingRecovered" animation="animated fadeInRightBig" classNames="bg-white" title="Get the tools to grow" body="Managing a growing network can be difficult. Sonar is here to help. Our dynamic network mapping provides a clear, real-time visualization of your WISP network. The visualization isn’t just pretty – it provides a wealth of valuable information and key insights, giving you the tools you need to take your business to the next level." ctaPage="/demo" ctaBody="Book a Demo" />
+            <landingFeature video="cable/Provisioning" animation="animated fadeInLeftBig" classNames="bg-paper-light" title="Billing and provisioning, together" body="With Sonar, all your data is in one place. So when a problem arises, the single, integrated interface lets you troubleshoot quicker than ever before. No more time wasted hopping around from one software to another. Everything’s right where you need it, giving you more time to focus on the things that matter – like growing your business." ctaPage="/demo" ctaBody="See Sonar in action" />
+            <landingFeature video="cable/NetworkLong" animation="animated fadeInRightBig" classNames="bg-white" title="Wave goodbye to manual provisioning" body="Manual provisioning can be a slow, error-prone, and laborious process. So let’s automate it. Automated provisioning speeds things up at every level, for everyone from technicians to customers. The Sonar platform assigns IPs automatically, and relays key information to installers in real-time. The result is next-level efficiency." ctaPage="/pricing" ctaBody="See pricing" />
             <lazy-component>
                 <features />
             </lazy-component>
@@ -36,7 +36,7 @@ import sonarNav from "@/components/sonarNav.vue";
 import sonarFooter from "@/components/sonarFooter.vue";
 import landingHero from "@/components/landing/landingHero.vue";
 import landingLogos from "@/components/landing/landingLogos.vue";
-import landingQuote from "@/components/landing/landingQuote.vue";
+// import landingQuote from "@/components/landing/landingQuote.vue";
 import landingFeature from "@/components/landing/landingFeature.vue";
 import landingCTA from "@/components/landing/landingCTA.vue";
 import landingDemoCards from "@/components/landing/landingDemoCards.vue";
@@ -53,7 +53,7 @@ export default {
         sonarFooter,
         landingHero,
         landingLogos,
-        landingQuote,
+        // landingQuote,
         landingCTA,
         // landingCaseForm,
         landingFeature,

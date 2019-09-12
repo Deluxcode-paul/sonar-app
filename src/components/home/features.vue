@@ -328,7 +328,7 @@
             /*background:linear-gradient(to right, #a1c4fd 0%, #c2e9fb 26%, #a1c4fd 81%);*/
             color: #fff;
             height: 60px;
-            background: linear-gradient(-90deg, #0f6afc, #70a7ff, #c2e9fb, #70a7ff, #0f6afc);
+            background: linear-gradient(-90deg, #0f6afc, #5697ff, #70a7ff, #5697ff, #0f6afc);
             background-size: 400% 400%;
             animation: gradientBG 5s ease infinite;
         }

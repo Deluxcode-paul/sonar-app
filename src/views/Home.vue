@@ -52,10 +52,8 @@ import sonarFooter from '../components/sonarFooter.vue'
 import landingHero from '../components/landing/landingHero.vue'
 import landingQuote from '../components/landing/landingQuote.vue'
 import landingFeature from '@/components/landing/landingFeature.vue'
-import stats from '@/components/home/stats.vue'
 import landingDemoCards from '@/components/landing/landingDemoCards.vue'
 import features from '@/components/home/features.vue'
-import award from '@/components/home/award.vue'
 import landingLogos from '@/components/landing/landingLogos.vue'
 import solutions from '@/components/home/solutions.vue'
 import cookieAgree from '@/components/popup/cookieAgree.vue'
@@ -72,8 +70,6 @@ export default {
         landingFeature,
         landingQuote,
         landingLogos,
-        stats,
-        award,
         landingDemoCards,
         solutions,
         cookieAgree,

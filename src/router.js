@@ -7,6 +7,7 @@ Vue.use(Router)
 function loadView(view) {
     return () => import( /* webpackChunkName: "sonar-[request]" */ `@/views/${view}.vue`)
 }
+// import WhySonar from "./views/WhySonar";
 
 
 export default new Router({
@@ -155,11 +156,6 @@ export default new Router({
             }
         },
 
-
-
-
-
-
         // end landing pages
 
         // casts
@@ -183,10 +179,10 @@ export default new Router({
         //whySonar
         {
             path: '/whySonar',
-            name: 'WhySonar',
+            name: 'whysonar',
             component: loadView('WhySonar'),
             meta: {
-                title: 'Sonar Billing & OSS + Casts',
+                title: 'WhySonar',
                 // metaTags: [{
                 //         name: 'description',
                 //         content: 'The home page of our example app.'
