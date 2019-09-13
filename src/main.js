@@ -35,6 +35,7 @@ Vue.component('VueCtkDateTimePicker', VueCtkDateTimePicker)
 // base styles and fonts
 import '@/style/base.css'
 import '../public/assets/fonts/webfonts.css'
+import "../public/assets/fonts/icomoon/style.css";
 import '@/style/media.css'
 import '@/style/img.css'
 import '@/style/util.css'

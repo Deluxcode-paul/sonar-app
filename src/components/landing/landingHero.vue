@@ -1,12 +1,12 @@
 <template>
-    <div style="overflow: hidden; min-height: 800px">
-        <section style=" min-height: 800px" id="header" :class="classNames">
+    <div style="overflow: hidden; min-height: 200px">
+        <section style=" min-height: 200px" id="header" :class="classNames">
             <div :class="[
           show
-            ? 'container grid-2 gap-large center fade visible hero'
-            : 'container grid-2 gap-large center fade not-visible hero'
+            ? 'container grid-2 gap-large fade visible hero'
+            : 'container grid-2 gap-large fade not-visible hero'
         ]">
-                <div style="z-index: 1" class="landingHero align-center-laptop width-s-tablet margin-s-top center-block-laptop">
+                <div style="z-index: 1" class="landingHero align-center-laptop width-s-tablet center-block-laptop">
                     <h1 class="mobile-small padding-xs-bottom headline-lead" :style="titleStyle">{{ title }}</h1>
                     <p class="lead color-silver hide-tablet">
                         {{ desktopBody }}
@@ -15,7 +15,13 @@
                         {{ mobileBody }}
                     </p>
                     <router-link v-if="page !== 'Enterprise'" :to="ctaPage" class="">
-                       <v-btn>{{ctaBody}}</v-btn>
+                        <div class="svg-wrapper">
+                            <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                                <rect :class="animate ? 'shape' : 'shapeNoAnimation'" height="60" width="320" />
+                            </svg>
+                            <div class="text">{{ctaBody}}</div>
+                        </div>
+<!--                       <v-btn>{{ctaBody}}</v-btn>-->
                     </router-link>
                 </div>
                 <div class="background-video show-desktop">
@@ -49,7 +55,8 @@ export default {
             mp4Url: "",
             webmUrl: "",
             mp4UrlSmall: "",
-            webmUrlSmall: ""
+            webmUrlSmall: "",
+            animate: true,
         }
     },
     props: {
@@ -86,17 +93,17 @@ export default {
         }
     },
     methods: {
-        videoPlay() {
-            this.show = true
-            this.$refs.motionGraphic.play()
-        },
-        videoPause() {
-            this.$nextTick(function() {
-                this.show = false
-                this.$refs.motionGraphic.pause()
-                this.$refs.motionGraphic.currentTime = '0'
-            })
-        }
+        // videoPlay() {
+        //     this.show = true
+        //     this.$refs.motionGraphic.play()
+        // },
+        // videoPause() {
+        //     this.$nextTick(function() {
+        //         this.show = false
+        //         this.$refs.motionGraphic.pause()
+        //         this.$refs.motionGraphic.currentTime = '0'
+        //     })
+        // }
     },
     mounted: function() {
         this.mp4Url = "/assets/motion/" + this.video + ".mp4"
@@ -107,6 +114,7 @@ export default {
             this.show = true;
             this.$refs.motionGraphic.play();
         })
+        setInterval(() => this.animate = !this.animate, 4000);
     }
 }
 </script>
@@ -131,6 +139,75 @@ export default {
             box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
         }
     }
+    .homeBkStyle {
+        background: linear-gradient(-90deg,  #000232, #000219,  #01012d);
+        background-size: 400% 400%;
+        animation: gradientBG 5s ease infinite;
+    }
+    @keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .svg-wrapper {
+        height: 60px;
+        margin: 0 auto;
+        position: relative;
+        top: 70px;
+        /*transform: translateY(-50%);*/
+        width: 320px;
+    }
+
+    .shape {
+        fill: transparent;
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+        stroke: #07f;
+        animation: draw 4s ease infinite;
+    }
+    .shapeNoAnimation {
+        fill: transparent;
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+        stroke: #07f;
+    }
+
+    .text {
+        color: #fff;
+        font-size: 22px;
+        /*letter-spacing: 8px;*/
+        /*line-height: 32px;*/
+        position: relative;
+        top: -48px;
+        text-align: center;
+    }
+
+    @keyframes draw {
+        0% {
+            stroke-dasharray: 140 540;
+            stroke-dashoffset: -474;
+            stroke-width: 8px;
+        }
+        100% {
+            stroke-dasharray: 760;
+            stroke-dashoffset: 0;
+            stroke-width: 2px;
+        }
+    }
+
+    /*.svg-wrapper:hover .shape {*/
+    /*    -webkit-animation: 0.5s draw linear forwards;*/
+    /*    animation: 0.5s draw linear forwards;*/
+    /*}*/
 </style>
 <style scoped>
 
@@ -159,7 +236,7 @@ p.lead {
 .background-video video {
     position: absolute;
     width: 505px;
-    top: 160px;
+    top: 0;
     bottom: 0;
     /*left: -300px;*/
     overflow: hidden;
@@ -172,7 +249,7 @@ video {
 
 .hero {
     max-width: 1150px;
-    height: 700px
+    min-height: 200px
 }
 
 </style>

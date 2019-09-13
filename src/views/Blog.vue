@@ -3,7 +3,7 @@
 	<body class="">
 		<sonarNav />
 		<div class="container-l padding-m-top padding-m-bottom">
-<blogLayout />
+		<blogLayout />
 			<landingCTA class="padding-l-bottom padding-s-top" showButton="true" imageSource="/assets/deviso.png"
 				ctaClassNames="container-l bg-gradient color-white grid-2 center-y radius-m shadow-l padding-m-left strip-padding-tablet"
 				title="Try Sonar today" subtitle="and discover the difference." button="Schedule a demo"

@@ -2,34 +2,12 @@
   <div id="pivot">
     <intersect @enter="videoPlay" @leave="videoPause">
       <div>
-          <div  class="landingCTA center-block align-center-laptop padding-s-all">
-            <transition
-                    enter-active-class="fadeInLeftBig"
-                    leave-active-class="fadeInRightBig"
-            >
-            <img v-if="show" class="phone1" src="/assets/banner/Phone1.png" alt="">
-            </transition>
-            <transition
-                    enter-active-class="fadeInDownBig"
-                    leave-active-class="fadeInRightBig"
-            >
-            <img v-if="show" class="phone2" src="/assets/banner/Phone2.png" alt="">
-            </transition>
-            <h1 class="titleLandingCTA">{{ title }}</h1>
-            <p class="color-opaque">{{ subtitle }}</p>
-            <h3 class="linkLandingCTA">Schedule a demo</h3>
-            <transition
-                    enter-active-class="fadeInRightBig"
-                    leave-active-class="fadeInRightBig"
-            >
-              <img v-if="show" class="screen1" src="/assets/banner/Screen-1.png" alt="">
-            </transition>
-            <transition
-                    enter-active-class="fadeInDownBig"
-                    leave-active-class="fadeInRightBig"
-            >
-              <img v-if="show" class="screen2" src="/assets/banner/Screen-2.png" alt="">
-            </transition>
+          <div @click="navigateDemo()" class="landingCTA center-block align-center-laptop padding-s-all">
+            <div>
+              <h1 class="titleLandingCTA">{{ title }}</h1>
+              <p class="color-opaque">{{ subtitle }}</p>
+              <h3 class="linkLandingCTA">Schedule a demo</h3>
+            </div>
           </div>
       </div>
     </intersect>
@@ -114,12 +92,15 @@ export default {
           // this.$refs.motionGraphic.pause()
           , 500)
       })
+    },
+    navigateDemo() {
+      this.$router.push({name:'demo'})
     }
   },
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .cta-img {
 border-radius: 0px 0px 12px 12px;
@@ -135,11 +116,12 @@ height: auto;
   transform: translateY(0px);
 }
   .landingCTA {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 40px 80px;
+    padding: 40px 40px;
     max-width: 980px;
     min-height: 150px;
     background: linear-gradient(0deg, #0052f5, #09f) !important;
@@ -151,26 +133,7 @@ height: auto;
   .linkLandingCTA {
     color: #fff;
   }
-  .phone1 {
-    position: absolute;
-    height: 365px;
-    left: 300px;
-  }
-  .phone2 {
-    position: absolute;
-    height: 365px;
-    left: 400px;
-  }
-  .screen1 {
-    position: absolute;
-    width: 554px;
-    right: 117px;
-    height: 350px;
-  }
-  .screen2 {
-    position: absolute;
-    width: 504px;
-    right: 69px;
-    height: 330px;
+  h1, p, h3 {
+    text-align: center;
   }
 </style>

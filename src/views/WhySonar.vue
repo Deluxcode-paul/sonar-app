@@ -21,11 +21,23 @@
                 </div>
             </div>
         </div>
-        <v-parallax
-                dark
-                class="blockSonar"
-                src="https://hightech.fm/wp-content/uploads/2019/03/ns-1560x877.jpg"
-        >
+        <div class="sonarDesktop">
+            <v-parallax
+                    dark
+                    class="blockSonar sonarDesktop"
+                    src="https://hightech.fm/wp-content/uploads/2019/03/ns-1560x877.jpg"
+            >
+                <div class="blockContent">
+                    <h1>Building partnerships</h1>
+                    <p>
+                        Our customers are our partners. That’s why our pricing is structured in such a way that our success is aligned with yours. Ultimately, our goal is to help you grow.
+                        And we believe in good first impressions. That’s why on-boarding is free. We don’t believe in hitting new customers with unwarranted fees for the privilege of coming aboard. We’re happy to have you here.
+                        The way we see it, this is the beginning of a beautiful friendship.
+                    </p>
+                </div>
+            </v-parallax>
+        </div>
+        <div class="mobileSonar blockSonar">
             <div class="blockContent">
                 <h1>Building partnerships</h1>
                 <p>
@@ -34,7 +46,7 @@
                     The way we see it, this is the beginning of a beautiful friendship.
                 </p>
             </div>
-        </v-parallax>
+        </div>
         <div class="blockSonar">
             <div class="blockContent">
                 <h1>An opportunity, not an obstacle</h1>
@@ -46,9 +58,10 @@
                 </p>
             </div>
         </div>
+        <div class="sonarDesktop">
             <v-parallax
+                    class="blockSonar sonarDesktop"
                     dark
-                    class="blockSonar"
                     src="https://hightech.fm/wp-content/uploads/2019/03/ns-1560x877.jpg"
             >
                 <div class="blockContent">
@@ -62,17 +75,26 @@
                     </p>
                 </div>
             </v-parallax>
+        </div>
+        <div class="mobileSonar blockSonar">
+            <div class="blockContent">
+                <h1>Start as you mean to go on</h1>
+                <p>
+                    Our first-rate customer service doesn’t stop at day one. You can get us anytime, anywhere – via phone, email, or through the website.
+                    We’re here every step of the way to help you get the most from the Sonar product, and use it to really grow your business.
+                    After all, that’s what Sonar was built for.
+                    Helpful documentation is always just a click away, and is made contextually available as you navigate the system.
+                    For new features, our Sonar Casts provide updates to keep you up to speed.
+                </p>
+            </div>
+        </div>
         <sonarFooter />
     </div>
 </template>
 <script>
     import sonarNav from "../components/sonarNav.vue";
     import sonarFooter from "../components/sonarFooter.vue";
-    // vue-intersect polyfill
     require('intersection-observer');
-
-    // vue-intersect
-    // import Intersect from 'vue-intersect'
 
     export default {
         name: "whysonar",
@@ -96,12 +118,12 @@
         }
     };
 </script>
-<style scoped>
+<style scoped lang="scss">
     .sonarHeader {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 160px 0 40px;
+        padding: 160px 20px 40px;
         align-items: center;
         min-height: 700px;
     }
@@ -115,7 +137,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 40px 0;
+        padding: 40px 20px;
         align-items: center;
         min-height: 650px;
     }
@@ -155,6 +177,19 @@
         }
         .videoSonar {
             display: none;
+        }
+    }
+    .mobileSonar {
+        display: none;
+    }
+    @media (max-width: 1500px) {
+        .sonarDesktop {
+            display: none;
+        }
+        .mobileSonar {
+            color: #fff;
+            display: block;
+            background-image: url("https://hightech.fm/wp-content/uploads/2019/03/ns-1560x877.jpg");
         }
     }
 </style>

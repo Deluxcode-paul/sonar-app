@@ -5,7 +5,7 @@
         <div class="copy">
           <p class="lead" style="margin-bottom: 1.2em;">{{ body }}</p>
           <div v-if="buttonTrue">
-            <a :href="ctaPage" class="cta icon">
+            <a  v-if="ctaBody" :href="ctaPage" class="cta icon">
               <svg width="26" height="26" style="margin-right: 3px">
                       <path
                               d="M 13 0 C 20.18 0 26 5.82 26 13 C 26 20.18 20.18 26 13 26 C 5.82 26 0 20.18 0 13 C 0 5.82 5.82 0 13 0 Z"
@@ -32,52 +32,33 @@
               {{ pageDemo }}
             </a>
           </div>
-            <div v-if="buttonTrueWatch">
-                <a :href="pageDemoUrl" class="cta icon">
-                    <svg width="26" height="26" style="margin-right: 3px">
-                        <path
-                                d="M 13 0 C 20.18 0 26 5.82 26 13 C 26 20.18 20.18 26 13 26 C 5.82 26 0 20.18 0 13 C 0 5.82 5.82 0 13 0 Z"
-                                fill="#05f"></path>
-                        <path
-                                d="M 12 7 C 12 6.448 12.448 6 13 6 L 13 6 C 13.552 6 14 6.448 14 7 L 14 17 C 14 17.552 13.552 18 13 18 L 13 18 C 12.448 18 12 17.552 12 17 Z"
-                                fill="hsl(0, 0%, 100%)"></path>
-                        <path d="M 9 15 L 13 19 L 17 15" fill="transparent" stroke-width="2" stroke="hsl(0, 0%, 100%)"
-                              stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    {{ pageDemo }}
-                </a>
-                <a href="#" class="cta icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path fill="#05f" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/></svg>
-                    Watch
-                </a>
-            </div>
         </div>
-        <intersect @enter="videoPlay" @leave="videoPause">
-          <div style="min-height: 700px">
-            <transition
-                    v-bind:enter-active-class="animation"
-                    v-bind:leave-active-class="animation"
-            >
-              <div class="visual whitned" v-if="show">
-                  <video height="690px" width="100%" ref="motionGraphic" autoplay muted playsinline>
+          <div class="desktopVideo">
+              <intersect @enter="videoPlay" @leave="videoPause">
+                  <div style="min-height: 500px">
+                      <transition
+                              v-bind:enter-active-class="animation"
+                              v-bind:leave-active-class="animation"
+                      >
+                          <div class="visual" v-if="show">
+                              <video height="auto" width="100%" ref="motionGraphic" autoplay muted playsinline>
+                                  <source :src="mp4Url" type="video/mp4" />
+                              </video>
+                          </div>
+                      </transition>
+                  </div>
+              </intersect>
+          </div>
+          <div class="mobileVideo">
+              <div class="visual">
+                  <video height="auto" width="100%" ref="motionGraphic" autoplay muted playsinline>
                       <source :src="mp4Url" type="video/mp4" />
                   </video>
               </div>
-            </transition>
           </div>
-        </intersect>
-<!--        <div class="visual">-->
-<!--          <div class="video-play-button"><span></span></div>-->
-<!--          <video height="auto" width="100%" ref="motionGraphic" autoplay muted playsinline>-->
-<!--            <source :src="[this.$isMobile() ? webmUrlSmall : webmUrl]" type="video/webm" />-->
-<!--            <source :src="[this.$isMobile() ? mp4UrlSmall : mp4Url]" type="video/mp4" />-->
-<!--          </video>-->
-<!--        </div>-->
       </div>
   </section>
 </template>
-
-
 <script>
   // vue-intersect polyfill
   require('intersection-observer');
@@ -144,14 +125,14 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   /*@import "<PATH_TO_SOURCE>/src/sass/vue2-animate.scss";*/
   .visual {
       display: flex;
       flex-direction: row;
       justify-content: center;
       height: 770px;
-      padding: 40px 0;
+      padding: 40px 0 0;
   }
   .whitned {
       position: relative;
@@ -199,7 +180,7 @@
     transform: scale(1.1)
 }
   .feature-block-vertical {
-      padding: 30px 0 !important;
+      padding: 0px 0 !important;
   }
 
   .feature-block-vertical>* {
@@ -213,9 +194,9 @@
       margin-top: 4em;
     }
 
-    section {
-      padding-bottom: 4em;
-    }
+    /*section {*/
+    /*  padding-bottom: 4em;*/
+    /*}*/
   }
 
 
@@ -383,5 +364,30 @@
       transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
       opacity: 0;
     }
+  }
+  .mobileVideo {
+      display: none;
+  }
+    @media(max-width: 700px) {
+        .desktopVideo {
+            display: none;
+        }
+        .mobileVideo {
+            display: block;
+            .visual {
+                margin: 0;
+                padding: 0;
+                height: 350px !important;
+                min-height: 400px;
+                video {
+                    min-height: 400px;
+                }
+            }
+        }
+    }
+  @media (max-width:1500px) {
+      .paaddingAllBlock {
+          padding: 50px 20px 0;
+      }
   }
 </style>

@@ -84,7 +84,9 @@ pre[class*="language-"] {
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
-    line-height: 1.5;
+    line-height: 1.2;
+    font-size: 12px;
+    padding: 0;
 
     -moz-tab-size: 4;
     -o-tab-size: 4;
