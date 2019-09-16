@@ -445,7 +445,4 @@
         -webkit-box-pack: center;
         justify-content: center;
     }
-
-    @media (max-width: )
-
     </style>

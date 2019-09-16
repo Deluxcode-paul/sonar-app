@@ -3,29 +3,24 @@
         <body class="nav-night frontpage">
             <sonarNav />
             <landingHero video="3D_Hero_6" title="Do business the Sonar way" desktopBody="Find out how Sonar is helping ISPs simplify day-to-day processes and focus on growing their business." mobileBody="Find out how Sonar is helping ISPs simplify day-to-day processes and focus on growing their business." ctaBody="Schedule demo" ctaPage="demo" classNames="code color-white padding-l margin-m-top homeBkStyle" />
-            <landingLogos class="paaddingAllBlock" />
-            <hr>
             <landingFeature class="paaddingAllBlock" video="cable/BillingRecovered" animation="animated fadeInRightBig" classNames="bg-paper-light" title="Discover Sonar" body="Sonar is a modern, cloud-based solution that solves everyday problems for ISPs. We simplify processes like billing, provisioning, and customer service, bringing them together in one place. Sonar is intelligent automation for ISPs. We reduce human error, streamline day-to-day processes, and improve your customer experience. Sonar is an opportunity. We help ISPs build a more modern, more flexible, and more streamlined business." buttonTrue="true" pageDemoUrl="/demo" pageDemo="Book a Demo"  />
-            <hr>
-            <landingQuote class="paaddingAllBlock feature-quote-inner" bodyClass="quote-text color-black" personClass="strong strip color-black" containerClass="width-l align-center center-block margin-s" body="We had 2 systems and every month it would take 24 hours of employee time to process our billing and now it happens automatically. " person="Glenwood Springs, ISP" :invertLogo="true" logo="consolidated.png" />
-            <hr>
             <features class="paaddingAllBlock"/>
             <lazy-component class="paaddingAllBlock">
                 <landingFeature video="cable/BillingRecovered" animation="animated fadeInLeftBig" classNames="bg-paper-light" title="First impressions are everything" body=" we like to get started on the right foot. At Sonar, we take great pride in our white glove on-boarding process. It’s personal, it’s fast, and – best of all – it’s 100% included in the price of the software. The Sonar product is at the heart of what we do, but the value we provide our clients extends well beyond the software itself, and beyond on-boarding, to ongoing customer support. Find out more about The Sonar Way link to Why Sonar page" buttonTrueWatch="true" pageDemoUrl="/demo" pageDemo="Book a Demo" />
             </lazy-component>
             <solutions  />
-            <div class="paaddingAllBlock bg-black" style="width:100%">
+            <div class="mobileNone paaddingAllBlock bg-black" style="width:100%">
                 <div class="container grid-2">
                     <landingCode />
                     <landingCodeForm style="max-width: 100%;" />
                 </div>
             </div>
             <div class="landingDesctop">
-                <v-parallax src="http://www.sclance.com/backgrounds/digital-background-hd/digital-background-hd_821779.png">
+                <v-parallax src="/assets/landingParalax.jpg">
                     <landingDemoCards />
                 </v-parallax>
             </div>
-            <div class="landingMobile">
+            <div class="landingMobile mobileNone">
                 <landingDemoCards />
             </div>
             <sonarFooter class="paaddingAllBlock" />
@@ -120,10 +115,18 @@ li:before {
         }
         .landingMobile {
             display: block;
-            background-image: url("http://www.sclance.com/backgrounds/digital-background-hd/digital-background-hd_821779.png");
+            background-image: url("/assets/landingParalax.jpg");
+            background-size: 100%;
+            background-position: center;
         }
         .paaddingAllBlock {
-            padding: 50px 20px 0;
+            padding: 50px 20px;
         }
     }
+    @media (max-width:1024px) {
+        .mobileNone {
+            display: none !important;
+        }
+    }
+
 </style>

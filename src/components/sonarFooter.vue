@@ -1,14 +1,14 @@
 <template>
     <div class="footer-bg padding-m-top padding-m-bottom" style="width:100%">
         <div class="container flex footer-inner center-block">
-            <div class="footer-col">
-                <sonarLogoFull class="hide-mobile" />
+            <div class="footer-col hide-mobile">
+                <sonarLogoFull />
             </div>
             <div class="footer-col">
                 <div class="footer__item">
                     <h6>Product</h6>
                 </div>
-                <div class="footer__item" v-for="item in product" :key="item">
+                <div class="footer__item mobileNone" v-for="item in product" :key="item">
                     <router-link :to="item.to" tag="a" class="item link">{{ item.page }}</router-link>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                 <div class="footer__item">
                     <h6>Solutions</h6>
                 </div>
-                <div class="footer__item" v-for="item in solutions" :key="item">
+                <div class="footer__item mobileNone" v-for="item in solutions" :key="item">
                     <router-link :to="item.to" tag="a" class="item link">{{ item.page }}</router-link>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                 <div class="footer__item">
                     <h6>Resources</h6>
                 </div>
-                <div class="footer__item" v-for="item in resources" :key="item">
+                <div class="footer__item mobileNone" v-for="item in resources" :key="item">
                     <router-link :to="item.to" tag="a" class="item link">{{ item.page }}</router-link>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <div class="footer__item">
                     <h6>Developer</h6>
                 </div>
-                <div class="footer__item" v-for="item in developer" :key="item">
+                <div class="footer__item mobileNone" v-for="item in developer" :key="item">
                     <router-link :to="item.to" tag="a" class="item link">{{ item.page }}</router-link>
                 </div>
             </div>
@@ -40,12 +40,12 @@
                 <div class="footer__item">
                     <h6 class="footer__title">Company</h6>
                 </div>
-                <div class="footer__item" v-for="item in company" :key="item">
+                <div class="footer__item mobileNone" v-for="item in company" :key="item">
                     <router-link v-if="item.tag" :to="item.to" tag="a" class="item link">{{ item.page }}<span class="badge bg-black color-white margin-s-left">{{ item.tag }}</span></router-link>
                     <router-link v-if="!item.tag" :to="item.to" tag="a" class="item link">{{ item.page }}</router-link>
                 </div>
             </div>
-            <div class="footer-col">
+            <div class="footer-col mobileNone">
                 <div class="footer__item">
                     <h6>Get in touch</h6>
                 </div>
@@ -263,28 +263,24 @@ img {
 }
 
 
-@media (max-width: 1024px) {
-    img {
-        display: none;
-    }
+/*@media (max-width: 1024px) {*/
+/*    img {*/
+/*        display: none;*/
+/*    }*/
 
-    .footer__item {
-        display: block;
-        padding: 10px 0;
-    }
+/*    .footer__item {*/
+/*        display: block;*/
+/*        padding: 10px 0;*/
+/*    }*/
 
-    .flex {
-        flex-direction: column;
-    }
+/*    .flex {*/
+/*        flex-direction: column;*/
+/*    }*/
 
-    .hide-mobile {
-        display: none;
-    }
-
-    .footer-col {
-        margin-bottom: 20px;
-    }
-}
+/*    .footer-col {*/
+/*        margin-bottom: 20px;*/
+/*    }*/
+/*}*/
 
 @media (min-width: 1024px) {
     .footer__logo {
@@ -543,4 +539,30 @@ body.nav-night>.is-dark {
 body:not(.nav-night)>.is-dark {
     display: none !important;
 }
+    @media (max-width: 1025px) {
+        .mobileNone {
+            display: none !important;
+        }
+        .flex {
+            flex-direction: row !important;
+            justify-content: space-between;
+        }
+        .container {
+            width: 100%;
+            margin: 0 !important;
+        }
+        h6 {
+            font-size: 10px;
+            text-align: center;
+        }
+        .footer-col {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .hide-mobile {
+            display: none;
+        }
+    }
 </style>

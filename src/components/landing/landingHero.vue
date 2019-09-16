@@ -1,12 +1,8 @@
 <template>
-    <div style="overflow: hidden; min-height: 200px">
-        <section style=" min-height: 200px" id="header" :class="classNames">
-            <div :class="[
-          show
-            ? 'container grid-2 gap-large fade visible hero'
-            : 'container grid-2 gap-large fade not-visible hero'
-        ]">
-                <div style="z-index: 1" class="landingHero align-center-laptop width-s-tablet center-block-laptop">
+    <div style="overflow: hidden; min-height: 100vh">
+        <section class="center-blockHeader padding-l" :class="classNames">
+            <div class="center-blockHeader container">
+                <div class="titleHeader">
                     <h1 class="mobile-small padding-xs-bottom headline-lead" :style="titleStyle">{{ title }}</h1>
                     <p class="lead color-silver hide-tablet">
                         {{ desktopBody }}
@@ -21,14 +17,12 @@
                             </svg>
                             <div class="text">{{ctaBody}}</div>
                         </div>
-<!--                       <v-btn>{{ctaBody}}</v-btn>-->
                     </router-link>
                 </div>
-                <div class="background-video show-desktop">
-                    <intersect @enter="videoPlay" @leave="videoPause">
-                        <video height="auto" width="505px" ref="motionGraphic" autoplay muted playsinline>
-                            <source v-if="video !== 'HeadMapping'" src="../../../public/assets/video/cable/NetworkHero.mp4" type="video/mp4" />
-                            <source v-if="video === 'HeadMapping'" src="../../../public/assets/video/fiber/HeadMapping.mp4" type="video/mp4" />
+                <div class="videoBlockHeader">
+                    <intersect>
+                        <video height="auto" width="900px" ref="motionGraphic" autoplay muted playsinline>
+                            <source  src="https://braveux.com/assets/videos/work/sonar/sonar-icmp.webm" type="video/webm" />
                         </video>
                     </intersect>
                 </div>
@@ -93,17 +87,6 @@ export default {
         }
     },
     methods: {
-        // videoPlay() {
-        //     this.show = true
-        //     this.$refs.motionGraphic.play()
-        // },
-        // videoPause() {
-        //     this.$nextTick(function() {
-        //         this.show = false
-        //         this.$refs.motionGraphic.pause()
-        //         this.$refs.motionGraphic.currentTime = '0'
-        //     })
-        // }
     },
     mounted: function() {
         this.mp4Url = "/assets/motion/" + this.video + ".mp4"
@@ -119,7 +102,7 @@ export default {
 }
 </script>
 
-<style>
+<style  lang="scss" >
     .landingHero .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
         color: #fff;
         background: #07f;
@@ -139,6 +122,7 @@ export default {
             box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
         }
     }
+
     .homeBkStyle {
         background: linear-gradient(-90deg,  #000232, #000219,  #01012d);
         background-size: 400% 400%;
@@ -161,34 +145,37 @@ export default {
         margin: 0 auto;
         position: relative;
         top: 70px;
-        /*transform: translateY(-50%);*/
         width: 320px;
+        transition: 1s;
+        .shape {
+            fill: transparent;
+            stroke-dasharray: 140 540;
+            stroke-dashoffset: -474;
+            stroke-width: 8px;
+            stroke: #07f;
+            animation: draw 4s ease infinite;
+        }
+        .shapeNoAnimation {
+            fill: transparent;
+            stroke-dasharray: 140 540;
+            stroke-dashoffset: -474;
+            stroke-width: 8px;
+            stroke: #07f;
+        }
+        .text {
+            color: #fff;
+            font-size: 22px;
+            position: relative;
+            text-align: center;
+        }
     }
-
-    .shape {
-        fill: transparent;
-        stroke-dasharray: 140 540;
-        stroke-dashoffset: -474;
-        stroke-width: 8px;
-        stroke: #07f;
-        animation: draw 4s ease infinite;
-    }
-    .shapeNoAnimation {
-        fill: transparent;
-        stroke-dasharray: 140 540;
-        stroke-dashoffset: -474;
-        stroke-width: 8px;
-        stroke: #07f;
-    }
-
-    .text {
-        color: #fff;
-        font-size: 22px;
-        /*letter-spacing: 8px;*/
-        /*line-height: 32px;*/
+    .svg-wrapper:hover {
+        height: 60px;
+        margin: 0 auto;
         position: relative;
-        top: -48px;
-        text-align: center;
+        top: 70px;
+        width: 320px;
+        background: #07f;
     }
 
     @keyframes draw {
@@ -203,25 +190,49 @@ export default {
             stroke-width: 2px;
         }
     }
-
-    /*.svg-wrapper:hover .shape {*/
-    /*    -webkit-animation: 0.5s draw linear forwards;*/
-    /*    animation: 0.5s draw linear forwards;*/
-    /*}*/
+    .padding-l {
+        padding-top: 0 !important;
+        padding-bottom:  0 !important;
+    }
 </style>
-<style scoped>
+<style lang="scss" scoped>
+    .center-blockHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+        .titleHeader {
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 15px;
+            h1 {
+                margin-bottom: 100px;
+            }
+        }
+        .videoBlockHeader {
+            position: absolute;
+            left: 70%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 15px;
+        }
+        .padding-l {
+            padding-top: 0 !important;
+            padding-bottom:  0 !important;
+        }
+    }
 
 p.lead {
     font-size: 24px;
     line-height: 1.5em;
 }
 
-@media (max-width: 475px) {
-    .size-h1.mobile-small,
-    h1.mobile-small {
-		font-size: 3.5em;
-    }
-}
 
 .size-h1.mobile-small, h1.mobile-small {
     letter-spacing: -2px;
@@ -238,18 +249,48 @@ p.lead {
     width: 505px;
     top: 0;
     bottom: 0;
-    /*left: -300px;*/
     overflow: hidden;
 }
 
 video {
-    max-width: 505px !important;
-    min-width: 505px !important;
+    max-width: 900px !important;
+    min-width: 900px !important;
 }
 
 .hero {
     max-width: 1150px;
-    min-height: 200px
+    min-height: 100vh;
 }
+    .landingHero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    @media (max-width: 1100px) {
+        .videoBlockHeader {
+            display: none !important;
+        }
+        .titleHeader {
+            width: 100% !important;
+            padding: 0 !important;
+        }
+    }
+    @media (max-width: 475px) {
+        .size-h1.mobile-small,
+        h1.mobile-small {
+            font-size: 3.5em;
+        }
+        .container {
+            padding: 0 !important;
+        }
+        .titleHeader {
+            width: 100%;
+            padding: 0 !important;
+        }
+        .padding-l {
+            padding-top: 0 !important;
+            padding-bottom:  100px !important;
+        }
+    }
 
 </style>

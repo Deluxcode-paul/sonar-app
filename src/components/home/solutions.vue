@@ -3,274 +3,230 @@
         <div class="solutionsDesktop">
             <v-parallax
                     style="height: 700px"
-                    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+                    src="/assets/flowers.jpg"
             >
-                <div class="container grid-2">
-                    <div class="">
+                <div class="container solutionsDesktopBlock">
+                    <div class="textDesktopBlock">
                         <h3 class="color-white align-left">Let’s talk about you.</h3>
-                        <p class="color-white width-s lead padding-s-top"> Every one of our customers is different. Choose your sector from the list and see how Sonar will work to grow your business.</p>
-                        <router-link to="demo" class="margin-s-top button deepblue big input-xl">
-                            Schedule a demo
+                        <p class="color-white lead padding-s-top"> Every one of our customers is different.
+                            <br>
+                            Choose your sector from the list and see how Sonar will work to grow your business.</p>
+                        <router-link to="demo">
+                            <div class="svg-wrapperDemoCards">
+                                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                                    <rect :class="animate ? 'shapeDemo' : 'shapeDemoNoAnimation'" height="60" width="320" />
+                                </svg>
+                                <div class="text">Schedule a Demo Now!</div>
+                            </div>
                         </router-link>
-                    </div>
-                    <div class="landingCards align-center justify-center">
-                        <a href="/solutions/wisp">
-                            <div direction="column" radius="3" color="B100" class="landingCard">
-                                <i class="icon-wisp iconSolutions"></i>
-                                <p class="landingCard-title">WISP</p>
-                            </div>
-                        </a>
-                        <a href="/solutions/fiber">
-                            <div direction="column" radius="3" color="B100" class="landingCard">
-                                <i class="icon-fiber iconSolutions"></i>
-                                <p class="landingCard-title">Fiber</p>
-                            </div>
-                        </a>
-                        <a href="/solutions/mdu">
-                            <div direction="column" radius="3" color="B100" class="landingCard">
-                                <i class="icon-mdu iconSolutions"></i>
-                                <p class="landingCard-title">MDU</p>
-                            </div>
-                        </a>
-                        <a href="/solutions/voice">
-                            <div direction="column" radius="3" color="B100" class="landingCard">
-                                <i class="icon-voice iconSolutions"></i>
-                                <p class="landingCard-title">Voice</p>
-                            </div>
-                        </a>
-                        <a href="/solutions/cable">
-                            <div direction="column" radius="3" color="B100" class="landingCard">
-                                <i class="icon-cable1 iconSolutions"></i>
-                                <!--                        <svg width="46" height="46" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">-->
-                                <!--                            <path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm6.736 11.376l-6.112-6.112c-.177-.176-.408-.264-.638-.264-.231 0-.461.088-.638.264l-1.269 1.27 1.61 1.61c.375-.126.803-.042 1.102.256.299.301.384.733.254 1.109l1.551 1.551c.376-.129.809-.045 1.109.255.419.419.419 1.097 0 1.517-.419.419-1.098.419-1.518 0-.314-.316-.393-.778-.233-1.167l-1.447-1.447v3.808c.102.051.198.118.284.204.418.418.418 1.097 0 1.517-.419.419-1.099.419-1.517 0-.42-.42-.42-1.099 0-1.517.103-.104.223-.183.351-.235v-3.844c-.128-.052-.248-.13-.351-.234-.318-.317-.395-.783-.231-1.173l-1.587-1.587-4.192 4.191c-.176.177-.264.407-.264.638 0 .23.088.461.264.638l6.113 6.112c.176.176.407.263.637.263.231 0 .461-.087.638-.263l6.084-6.083c.176-.177.264-.408.264-.638 0-.231-.088-.462-.264-.638v-.001z" />-->
-                                <!--                        </svg>-->
-                                <p class="landingCard-title">Cable</p>
-                            </div>
-                        </a>
-                        <a href="/solutions/enterprise">
-                            <div direction="column" radius="3" color="B100" class="landingCard">
-                                <i class="icon-enterprise iconSolutions"></i>
-                                <p class="landingCard-title">Enterprise</p>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </v-parallax>
         </div>
         <div class="mobileSolutions">
-            <div class="container grid-2" style="70px 10px">
-                <div class="">
+            <div class="container solutionblock">
+                <div class="textSolutions">
                     <h3 class="color-white align-left">Let’s talk about you.</h3>
-                    <p class="color-white width-s lead padding-s-top"> Every one of our customers is different. Choose your sector from the list and see how Sonar will work to grow your business.</p>
-                    <router-link to="demo" class="margin-s-top button deepblue big input-xl">
-                        Schedule a demo
+                    <p class="color-white width-s lead padding-s-top"> Every one of our customers is different.
+                        <br>
+                        Choose your sector from the list and see how Sonar will work to grow your business.
+                    </p>
+                    <router-link to="demo">
+                        <div class="svg-wrapperDemoCards">
+                            <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                                <rect :class="animate ? 'shapeDemo' : 'shapeDemoNoAnimation'" height="60" width="320" />
+                            </svg>
+                            <div class="text">Schedule a Demo Now!</div>
+                        </div>
                     </router-link>
                 </div>
-                <div class="landingCards align-center justify-center">
-                    <a href="/solutions/wisp">
-                        <div direction="column" radius="3" color="B100" class="landingCard">
-                            <i class="icon-wisp iconSolutions"></i>
-                            <p class="landingCard-title">WISP</p>
-                        </div>
-                    </a>
-                    <a href="/solutions/fiber">
-                        <div direction="column" radius="3" color="B100" class="landingCard">
-                            <i class="icon-fiber iconSolutions"></i>
-                            <p class="landingCard-title">Fiber</p>
-                        </div>
-                    </a>
-                    <a href="/solutions/mdu">
-                        <div direction="column" radius="3" color="B100" class="landingCard">
-                            <i class="icon-mdu iconSolutions"></i>
-                            <p class="landingCard-title">MDU</p>
-                        </div>
-                    </a>
-                    <a href="/solutions/voice">
-                        <div direction="column" radius="3" color="B100" class="landingCard">
-                            <i class="icon-voice iconSolutions"></i>
-                            <p class="landingCard-title">Voice</p>
-                        </div>
-                    </a>
-                    <a href="/solutions/cable">
-                        <div direction="column" radius="3" color="B100" class="landingCard">
-                            <i class="icon-cable1 iconSolutions"></i>
-                            <!--                        <svg width="46" height="46" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">-->
-                            <!--                            <path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm6.736 11.376l-6.112-6.112c-.177-.176-.408-.264-.638-.264-.231 0-.461.088-.638.264l-1.269 1.27 1.61 1.61c.375-.126.803-.042 1.102.256.299.301.384.733.254 1.109l1.551 1.551c.376-.129.809-.045 1.109.255.419.419.419 1.097 0 1.517-.419.419-1.098.419-1.518 0-.314-.316-.393-.778-.233-1.167l-1.447-1.447v3.808c.102.051.198.118.284.204.418.418.418 1.097 0 1.517-.419.419-1.099.419-1.517 0-.42-.42-.42-1.099 0-1.517.103-.104.223-.183.351-.235v-3.844c-.128-.052-.248-.13-.351-.234-.318-.317-.395-.783-.231-1.173l-1.587-1.587-4.192 4.191c-.176.177-.264.407-.264.638 0 .23.088.461.264.638l6.113 6.112c.176.176.407.263.637.263.231 0 .461-.087.638-.263l6.084-6.083c.176-.177.264-.408.264-.638 0-.231-.088-.462-.264-.638v-.001z" />-->
-                            <!--                        </svg>-->
-                            <p class="landingCard-title">Cable</p>
-                        </div>
-                    </a>
-                    <a href="/solutions/enterprise">
-                        <div direction="column" radius="3" color="B100" class="landingCard">
-                            <i class="icon-enterprise iconSolutions"></i>
-                            <p class="landingCard-title">Enterprise</p>
-                        </div>
-                    </a>
-                </div>
+
             </div>
         </div>
     </div>
 </template>
 <script>
 export default {
-    name: 'solutions'
+    name: 'solutions',
+    data: () => ({
+        animate: false,
+    }),
+    mounted() {
+        setInterval(() => this.animate = !this.animate, 4000);
+    }
 }
 </script>
-<style>
+<style lang="scss">
     v-paralax {
         padding: 100px 0 !important;
     }
+    .svg-wrapperDemoCards {
+        height: 60px;
+        margin: 0 auto;
+        position: relative;
+        width: 320px;
+        transition: 2s;
+        .shapeDemo {
+            fill: transparent;
+            stroke-dasharray: 140 540;
+            stroke-dashoffset: -474;
+            stroke-width: 8px;
+            stroke: #fff;
+            animation: draw 4s ease infinite;
+        }
+        .shapeDemoNoAnimation {
+            fill: transparent;
+            stroke-dasharray: 140 540;
+            stroke-dashoffset: -474;
+            stroke-width: 8px;
+            stroke: #fff;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            color: #fff;
+            font-size: 22px;
+            height: 60px;
+            /*letter-spacing: 8px;*/
+            /*line-height: 32px;*/
+            position: relative;
+            top: -60px;
+            text-align: center;
+        }
+    }
+    .svg-wrapperDemoCards:hover {
+        height: 60px;
+        margin: 0 auto;
+        position: relative;
+        width: 320px;
+        background: white;
+        .shapeDemo {
+            fill: transparent;
+            stroke-dasharray: 140 540;
+            stroke-dashoffset: -474;
+            stroke-width: 8px;
+            stroke: #fff;
+            animation: draw 4s ease infinite;
+        }
+        .shapeDemoNoAnimation {
+            fill: transparent;
+            stroke-dasharray: 140 540;
+            stroke-dashoffset: -474;
+            stroke-width: 8px;
+            stroke: #fff;
+        }
+
+        .text {
+            color: #000;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 22px;
+            height: 60px;
+            /*letter-spacing: 8px;*/
+            /*line-height: 32px;*/
+            position: relative;
+            top: -60px;
+            text-align: center;
+        }
+    }
+
+    @keyframes draw {
+        0% {
+            stroke-dasharray: 140 540;
+            stroke-dashoffset: -474;
+            stroke-width: 8px;
+        }
+        100% {
+            stroke-dasharray: 760;
+            stroke-dashoffset: 0;
+            stroke-width: 2px;
+        }
+    }
 </style>
-<style scoped>
+<style lang="scss" scoped>
+    .solutionsDesktop {
+        .solutionsDesktopBlock {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            .textDesktopBlock {
+                min-width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                text-align: center;
+                margin: 10px 20px;
+                h3 {
+                    text-align: center;
+                }
+                p {
+                    line-height: 2;
+                }
+            }
+        }
+
+    }
     .iconSolutions {
         font-size: 48px;
     }
-.landingCard-title {
-    font-size: 18px;
-    line-height: 1.7;
-    margin-top: 25px;
-    margin-bottom: 0px;
-    font-weight: 500;
-}
-
-.landingCard-sub {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.7;
-    margin: 0px;
-}
-
-* {
-    box-sizing: inherit;
-}
-
-a {
-    text-decoration: none;
-}
-
-::selection {
-    color: rgb(255, 255, 255);
-    background: rgba(0, 85, 255, 0.99);
-}
-
-.landingCards {
-    margin: 0px auto;
-    width: 87.5vw;
-    overflow: visible;
-    position: relative;
-    display: grid;
-    gap: 20px 20px;
-    grid-template-columns: 1fr;
-}
-
-@media screen and (min-width: 768px) {
-    .landingCards {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .landingCards {
-        max-width: 692px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .landingCards {
-        max-width: 980px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .landingCards {
-        /*        grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);*/
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .landingCards {
-        gap: 20px 20px;
-    }
-}
-
-@media screen and (min-width: 375px) {
-    .landingCards {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .landingCards {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .landingCards {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.landingCard {
-    color: rgb(255, 255, 255);
-    border-radius: 8px;
-    padding-top: 37px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-flow: column nowrap;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    transition: all 0.25s ease 0s;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0px 0.5px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px, rgba(0, 0, 0, 0.09) 0px 2px 4px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 0.5px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px, rgba(0, 0, 0, 0.09) 0px 2px 4px;
-    border: 1px solid hsla(218, 14%, 85%, 0.31)
-}
-
-.landingCard path {
-    fill: rgba(255, 255, 255, 0.8);
-    transition: all 0.25s ease 0s;
-}
-
-.landingCard p {
-    line-height: 1.5;
-    transition: all 0.25s ease 0s;
-    font-size: 19px !important;
-}
-
-.landingCard p:nth-of-type(2) {
-    color: rgb(170, 170, 170);
-    font-size: 14px !important;
-}
-
-.landingCard:hover {
-    transform: translateY(-7px);
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px, rgba(0, 0, 0, 0.05) 0px 2px 6px, rgba(0, 0, 0, 0.05) 0px 10px 20px;
-}
-
-.landingCard:hover path {
-    fill: rgba(255, 255, 255, 1)
-}
-
-.landingCard:hover p {
-    color: rgba(255, 255, 255, 1)
-}
-
-.landingCard:active {
-    opacity: 0.8;
-}
 .mobileSolutions {
     display: none;
 }
+
 @media (max-width: 1500px) {
   .solutionsDesktop {
      display: none;
   }
   .mobileSolutions {
-    display: block;
-    background-image: url("https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg");
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-image: url("/assets/flowers.jpg");
+      background-size: 100%;
+      background-position: center;
+      min-height: 500px;
+      .solutionblock {
+          min-height: 500px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .textSolutions {
+              min-height: 500px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              padding: 0 0 20px;
+              h3 {
+                  color: #fff;
+                  text-align: center;
+              }
+              p {
+                  color: #fff;
+              }
+          }
+      }
    }
 }
+    @media (max-width: 1024px) {
+        .mobileSolutions {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-image: url("/assets/flowers.jpg");
+            min-height: 500px;
+            background-size: 300%;
+            background-position: center;
+        }
+    }
 </style>

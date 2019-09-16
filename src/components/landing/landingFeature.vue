@@ -4,34 +4,6 @@
         <h2 class="width-l" style="margin-bottom: 0.8em;">{{ title }}</h2>
         <div class="copy">
           <p class="lead" style="margin-bottom: 1.2em;">{{ body }}</p>
-          <div v-if="buttonTrue">
-            <a  v-if="ctaBody" :href="ctaPage" class="cta icon">
-              <svg width="26" height="26" style="margin-right: 3px">
-                      <path
-                              d="M 13 0 C 20.18 0 26 5.82 26 13 C 26 20.18 20.18 26 13 26 C 5.82 26 0 20.18 0 13 C 0 5.82 5.82 0 13 0 Z"
-                              fill="#05f"></path>
-                      <path
-                              d="M 12 7 C 12 6.448 12.448 6 13 6 L 13 6 C 13.552 6 14 6.448 14 7 L 14 17 C 14 17.552 13.552 18 13 18 L 13 18 C 12.448 18 12 17.552 12 17 Z"
-                              fill="hsl(0, 0%, 100%)"></path>
-                      <path d="M 9 15 L 13 19 L 17 15" fill="transparent" stroke-width="2" stroke="hsl(0, 0%, 100%)"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-              {{ ctaBody }}
-            </a>
-            <a :href="pageDemoUrl" class="cta icon">
-              <svg width="26" height="26" style="margin-right: 3px">
-                      <path
-                              d="M 13 0 C 20.18 0 26 5.82 26 13 C 26 20.18 20.18 26 13 26 C 5.82 26 0 20.18 0 13 C 0 5.82 5.82 0 13 0 Z"
-                              fill="#05f"></path>
-                      <path
-                              d="M 12 7 C 12 6.448 12.448 6 13 6 L 13 6 C 13.552 6 14 6.448 14 7 L 14 17 C 14 17.552 13.552 18 13 18 L 13 18 C 12.448 18 12 17.552 12 17 Z"
-                              fill="hsl(0, 0%, 100%)"></path>
-                      <path d="M 9 15 L 13 19 L 17 15" fill="transparent" stroke-width="2" stroke="hsl(0, 0%, 100%)"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-              {{ pageDemo }}
-            </a>
-          </div>
         </div>
           <div class="desktopVideo">
               <intersect @enter="videoPlay" @leave="videoPause">
@@ -55,6 +27,16 @@
                       <source :src="mp4Url" type="video/mp4" />
                   </video>
               </div>
+          </div>
+          <div class="demoButton" v-if="buttonTrue">
+              <a :href="pageDemoUrl" class="cta icon">
+                  <div class="svg-wrapperDemo">
+                      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                          <rect :class="animate ? 'shapeDemo' : 'shapeNoAnimationDemo'" height="60" width="320" />
+                      </svg>
+                      <div class="textDemo">{{pageDemo}}</div>
+                  </div>
+              </a>
           </div>
       </div>
   </section>
@@ -80,6 +62,7 @@
         webmUrl: "",
         mp4UrlSmall: "",
         webmUrlSmall: "",
+        animate: false,
       }
     },
     props: {
@@ -119,7 +102,8 @@
 
       this.$nextTick(() => {
         this.cssMagic = false;
-      })
+      });
+      setInterval(() => this.animate = !this.animate, 4000);
     },
     beforeDestroy: function () {}
   }
@@ -368,12 +352,72 @@
   .mobileVideo {
       display: none;
   }
-    @media(max-width: 700px) {
+  .svg-wrapperDemo {
+      transition: 1s;
+      height: 60px;
+      margin: 0 auto;
+      /*transform: translateY(-50%);*/
+      width: 320px;
+  }
+
+  .shapeDemo {
+      fill: transparent;
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+      stroke: #07f;
+      animation: draw 4s ease infinite;
+  }
+  .shapeNoAnimationDemo {
+      fill: transparent;
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+      stroke: #07f;
+  }
+
+  .textDemo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      color: #07f;
+      font-size: 22px;
+      /*letter-spacing: 8px;*/
+      /*line-height: 32px;*/
+      position: relative;
+      height: 60px;
+      top: -60px;
+      text-align: center;
+  }
+  .demoButton {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 40px;
+  }
+
+  @keyframes draw {
+      0% {
+          stroke-dasharray: 140 540;
+          stroke-dashoffset: -474;
+          stroke-width: 8px;
+      }
+      100% {
+          stroke-dasharray: 760;
+          stroke-dashoffset: 0;
+          stroke-width: 2px;
+      }
+  }
+
+    @media(max-width: 1024px) {
         .desktopVideo {
             display: none;
         }
         .mobileVideo {
-            display: block;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
             .visual {
                 margin: 0;
                 padding: 0;
@@ -387,7 +431,7 @@
     }
   @media (max-width:1500px) {
       .paaddingAllBlock {
-          padding: 50px 20px 0;
+          padding: 50px 20px;
       }
   }
 </style>

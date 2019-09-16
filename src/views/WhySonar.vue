@@ -188,7 +188,7 @@
         }
         .mobileSonar {
             color: #fff;
-            display: block;
+            display: flex;
             background-image: url("https://hightech.fm/wp-content/uploads/2019/03/ns-1560x877.jpg");
         }
     }

@@ -21,7 +21,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
 * {
     box-sizing: border-box;
 }
