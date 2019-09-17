@@ -69,6 +69,22 @@
                             <p>Demo</p>
                         </router-link>
                     </li>
+                    <li>
+                        <router-link to="/blog" class="sub-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                                <path d="M2 5v-5h20v5h-20zm13.909 13.223c.222 1.468-.186 4.534-1.341 5.702 2.201-1.174 5.938-4.884 7.432-6.881-1.286.9-4.044 1.657-6.091 1.179zm6.091-11.223v6c0 3.419-5.247 3.745-8.256 3 0 0 1.522 8-3.335 8h-8.409v-17h20zm-10 9h-6v1h6v-1zm6-3h-12v1h12v-1zm0-3h-12v1h12v-1z" />
+                            </svg>
+                            <p>Blog</p>
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link to="/leadership" class="sub-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                                <path d="M20.822 18.096c-3.439-.794-6.641-1.49-5.09-4.418 4.719-8.912 1.251-13.678-3.732-13.678-5.081 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-2.979.688-3.178 2.143-3.178 4.663l.005 1.241h10.483l.704-3h1.615l.704 3h10.483l.005-1.241c.001-2.52-.198-3.975-3.177-4.663zm-8.231 1.904h-1.164l-.91-2h2.994l-.92 2z" />
+                            </svg>
+                            <p>About Us</p>
+                        </router-link>
+                    </li>
                 </ul>
             </div>
             <div>
@@ -79,14 +95,6 @@
                                 <path d="M 13 0 C 20.18 0 26 5.82 26 13 C 26 20.18 20.18 26 13 26 C 5.82 26 0 20.18 0 13 C 0 5.82 5.82 0 13 0 Z M 9 17.234 C 9 18.011 9.848 18.491 10.514 18.091 L 17.571 13.857 C 18.218 13.469 18.218 12.531 17.571 12.143 L 10.514 7.909 C 9.848 7.509 9 7.989 9 8.766 Z" fill="rgba(51, 51, 51, 1.00)"></path>
                             </svg>
                             <p>Sonar Casts</p>
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link to="/blog" class="sub-list">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
-                                <path d="M2 5v-5h20v5h-20zm13.909 13.223c.222 1.468-.186 4.534-1.341 5.702 2.201-1.174 5.938-4.884 7.432-6.881-1.286.9-4.044 1.657-6.091 1.179zm6.091-11.223v6c0 3.419-5.247 3.745-8.256 3 0 0 1.522 8-3.335 8h-8.409v-17h20zm-10 9h-6v1h6v-1zm6-3h-12v1h12v-1zm0-3h-12v1h12v-1z" />
-                            </svg>
-                            <p>Blog</p>
                         </router-link>
                     </li>
                     <li>
@@ -157,14 +165,6 @@
             <div>
                 <ul class="sub-list">
                     <li>
-                        <router-link to="/leadership" class="sub-list">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
-                                <path d="M20.822 18.096c-3.439-.794-6.641-1.49-5.09-4.418 4.719-8.912 1.251-13.678-3.732-13.678-5.081 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-2.979.688-3.178 2.143-3.178 4.663l.005 1.241h10.483l.704-3h1.615l.704 3h10.483l.005-1.241c.001-2.52-.198-3.975-3.177-4.663zm-8.231 1.904h-1.164l-.91-2h2.994l-.92 2z" />
-                            </svg>
-                            <p>About Us</p>
-                        </router-link>
-                    </li>
-                    <li>
                         <router-link to="/newsroom" class="sub-list">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
                                 <path d="M7 16h13v1h-13v-1zm13-3h-13v1h13v-1zm0-6h-5v1h5v-1zm0 3h-5v1h5v-1zm-17-8v17.199c0 .771-1 .771-1 0v-15.199h-2v15.98c0 1.115.905 2.02 2.02 2.02h19.958c1.117 0 2.022-.904 2.022-2.02v-17.98h-21zm19 17h-17v-15h17v15zm-9-12h-6v4h6v-4z" />
@@ -212,9 +212,4 @@ export default {
         font-size: 26px;
         line-height: 2;
     }
-    /*.sub-list {*/
-    /*    display: flex;*/
-    /*    flex-direction: row;*/
-    /*    justify-content: flex-start;*/
-    /*}*/
 </style>

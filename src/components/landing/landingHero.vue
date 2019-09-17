@@ -4,13 +4,8 @@
             <div class="center-blockHeader container">
                 <div class="titleHeader">
                     <h1 class="mobile-small padding-xs-bottom headline-lead" :style="titleStyle">{{ title }}</h1>
-                    <p class="lead color-silver hide-tablet">
-                        {{ desktopBody }}
-                    </p>
-                    <p class="lead color-silver show-tablet">
-                        {{ mobileBody }}
-                    </p>
-                    <router-link v-if="page !== 'Enterprise'" :to="ctaPage" class="">
+                    <p class="lead color-silver" v-html="desktopBody"></p>
+                    <router-link v-if="page !== 'Enterprise'" :to="ctaPage">
                         <div class="svg-wrapper">
                             <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                                 <rect :class="animate ? 'shape' : 'shapeNoAnimation'" height="60" width="320" />
@@ -21,8 +16,8 @@
                 </div>
                 <div class="videoBlockHeader">
                     <intersect>
-                        <video height="auto" width="900px" ref="motionGraphic" autoplay muted playsinline>
-                            <source  src="https://braveux.com/assets/videos/work/sonar/sonar-icmp.webm" type="video/webm" />
+                        <video height="auto" width="900px" ref="motionGraphic" autoplay muted playsinline loop>
+                            <source src="/assets/video/home/sonarHeader.webm" type="video/webm" />
                         </video>
                     </intersect>
                 </div>
@@ -30,13 +25,8 @@
         </section>
     </div>
 </template>
-
 <script>
-	
-// vue-intersect polyfill
 require('intersection-observer');
-
-// vue-intersect
 import Intersect from 'vue-intersect'
 
 export default {
@@ -44,89 +34,30 @@ export default {
     components: {
         Intersect
     },
-    data() {
-        return {
-            mp4Url: "",
-            webmUrl: "",
-            mp4UrlSmall: "",
-            webmUrlSmall: "",
-            animate: true,
-        }
-    },
+    data: () => ({
+        webmUrl: "",
+        animate: true,
+    }),
     props: {
-        show: Boolean,
         titleStyle: String,
-        classNames: {
-            type: String,
-            required: true
-        },
+        classNames: String,
         video: String,
-        title: {
-            type: String,
-            required: true
-        },
-        desktopBody: {
-            type: String,
-            required: true
-        },
-        mobileBody: {
-            type: String,
-            required: true
-        },
-        ctaBody: {
-            type: String,
-            required: true
-        },
-        ctaPage: {
-            type: String,
-            required: true
-        },
-        page: {
-            type: String,
-            required: true
-        }
+        title: String,
+        desktopBody: String,
+        ctaBody: String,
+        ctaPage: String,
+        page: String,
     },
-    methods: {
-    },
-    mounted: function() {
-        this.mp4Url = "/assets/motion/" + this.video + ".mp4"
-        this.webmUrl = "/assets/motion/" + this.video + ".webm"
-        this.mp4UrlSmall = "/assets/motion/" + this.video + "_small.mp4"
-        this.webmUrlSmall = "/assets/motion/" + this.video + "_small.webm"
-        this.$nextTick(function() {
-            this.show = true;
-            this.$refs.motionGraphic.play();
-        })
+    mounted() {
         setInterval(() => this.animate = !this.animate, 4000);
     }
 }
 </script>
-
 <style  lang="scss" >
-    .landingHero .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
-        color: #fff;
-        background: #07f;
-        height: 50px;
-        cursor: pointer;
-        animation: bookDemoShadow 5s ease infinite;
-    }
-
-    @keyframes bookDemoShadow {
-        0% {
-            box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
-        }
-        50% {
-            box-shadow: 0 0 80px rgba(255, 255, 255, 0.8);
-        }
-        100% {
-            box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
-        }
-    }
-
     .homeBkStyle {
-        background: linear-gradient(-90deg,  #000232, #000219,  #01012d);
+        background: linear-gradient(-90deg, #010125, #000246,  #243B77, #01013E, #010125);
         background-size: 400% 400%;
-        animation: gradientBG 5s ease infinite;
+        animation: gradientBG 3s ease infinite;
     }
     @keyframes gradientBG {
         0% {
@@ -139,12 +70,17 @@ export default {
             background-position: 0% 50%;
         }
     }
-
+    .center-blockHeader {
+        p {
+            .noBr {
+                display: inline-block;
+            }
+        }
+    }
     .svg-wrapper {
         height: 60px;
-        margin: 0 auto;
+        margin: 50px auto;
         position: relative;
-        top: 70px;
         width: 320px;
         transition: 1s;
         .shape {
@@ -165,15 +101,15 @@ export default {
         .text {
             color: #fff;
             font-size: 22px;
+            top: -45px;
             position: relative;
             text-align: center;
         }
     }
     .svg-wrapper:hover {
         height: 60px;
-        margin: 0 auto;
+        margin: 50px auto;
         position: relative;
-        top: 70px;
         width: 320px;
         background: #07f;
     }
@@ -211,6 +147,16 @@ export default {
             padding: 15px;
             h1 {
                 margin-bottom: 100px;
+                .mobile-small {
+                    letter-spacing: -2px;
+                }
+            }
+            p {
+
+            }
+            .lead {
+                font-size: 24px;
+                line-height: 1.5em;
             }
         }
         .videoBlockHeader {
@@ -221,50 +167,15 @@ export default {
             flex-direction: column;
             justify-content: center;
             padding: 15px;
+            video {
+                max-width: 900px !important;
+                min-width: 900px !important;
+            }
         }
         .padding-l {
             padding-top: 0 !important;
             padding-bottom:  0 !important;
         }
-    }
-
-p.lead {
-    font-size: 24px;
-    line-height: 1.5em;
-}
-
-
-.size-h1.mobile-small, h1.mobile-small {
-    letter-spacing: -2px;
-}
-
-.background-video {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.background-video video {
-    position: absolute;
-    width: 505px;
-    top: 0;
-    bottom: 0;
-    overflow: hidden;
-}
-
-video {
-    max-width: 900px !important;
-    min-width: 900px !important;
-}
-
-.hero {
-    max-width: 1150px;
-    min-height: 100vh;
-}
-    .landingHero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
     @media (max-width: 1100px) {
         .videoBlockHeader {
@@ -276,20 +187,48 @@ video {
         }
     }
     @media (max-width: 475px) {
-        .size-h1.mobile-small,
-        h1.mobile-small {
+        .center-blockHeader {
+            min-height: 120px !important;
+        }
+        .mobile-small {
             font-size: 3.5em;
         }
         .container {
             padding: 0 !important;
         }
         .titleHeader {
+            min-height: 120vh;
             width: 100%;
             padding: 0 !important;
         }
         .padding-l {
-            padding-top: 0 !important;
-            padding-bottom:  100px !important;
+            padding-top: 100px !important;
+            padding-bottom: 100px !important;
+        }
+        .svg-wrapper {
+            margin: 40px auto;
+        }
+    }
+    @media (min-width: 568px) and (max-width: 1024px) {
+        .center-blockHeader{
+            .titleHeader{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+             h1 {
+                 margin-bottom: 0px;
+             }
+            }
+            .svg-wrapper {
+                margin: 0;
+            }
+        }
+    }
+    @media (max-width: 320px) {
+        .svg-wrapper {
+            position: relative;
+            right: 25px;
         }
     }
 

@@ -7,12 +7,12 @@
             >
                 <div class="container solutionsDesktopBlock">
                     <div class="textDesktopBlock">
-                        <h3 class="color-white align-left">Let’s talk about you.</h3>
+                        <h3 class="color-white align-left">Let’s talk about you!</h3>
                         <p class="color-white lead padding-s-top"> Every one of our customers is different.
                             <br>
                             Choose your sector from the list and see how Sonar will work to grow your business.</p>
                         <router-link to="demo">
-                            <div class="svg-wrapperDemoCards">
+                            <div class="svg-wrapperSolutions">
                                 <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                                     <rect :class="animate ? 'shapeDemo' : 'shapeDemoNoAnimation'" height="60" width="320" />
                                 </svg>
@@ -26,13 +26,13 @@
         <div class="mobileSolutions">
             <div class="container solutionblock">
                 <div class="textSolutions">
-                    <h3 class="color-white align-left">Let’s talk about you.</h3>
-                    <p class="color-white width-s lead padding-s-top"> Every one of our customers is different.
+                    <h3 class="color-white align-left">Let’s talk about you!</h3>
+                    <p class="color-white lead padding-s-top"> Every one of our customers is different.
                         <br>
                         Choose your sector from the list and see how Sonar will work to grow your business.
                     </p>
                     <router-link to="demo">
-                        <div class="svg-wrapperDemoCards">
+                        <div class="svg-wrapperSolutions">
                             <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                                 <rect :class="animate ? 'shapeDemo' : 'shapeDemoNoAnimation'" height="60" width="320" />
                             </svg>
@@ -60,7 +60,7 @@ export default {
     v-paralax {
         padding: 100px 0 !important;
     }
-    .svg-wrapperDemoCards {
+    .svg-wrapperSolutions {
         height: 60px;
         margin: 0 auto;
         position: relative;
@@ -97,7 +97,7 @@ export default {
             text-align: center;
         }
     }
-    .svg-wrapperDemoCards:hover {
+    .svg-wrapperSolutions:hover {
         height: 60px;
         margin: 0 auto;
         position: relative;
@@ -127,8 +127,6 @@ export default {
             align-items: center;
             font-size: 22px;
             height: 60px;
-            /*letter-spacing: 8px;*/
-            /*line-height: 32px;*/
             position: relative;
             top: -60px;
             text-align: center;
@@ -145,6 +143,14 @@ export default {
             stroke-dasharray: 760;
             stroke-dashoffset: 0;
             stroke-width: 2px;
+        }
+    }
+    @media (max-width: 320px) {
+        .mobileSolutions {
+            .svg-wrapperSolutions {
+                position: relative;
+                right: 30px !important;
+            }
         }
     }
 </style>
@@ -165,58 +171,67 @@ export default {
                 text-align: center;
                 margin: 10px 20px;
                 h3 {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    font-size: 56px;
                     text-align: center;
                 }
                 p {
+                    font-size: 34px;
                     line-height: 2;
                 }
             }
         }
-
     }
     .iconSolutions {
         font-size: 48px;
     }
-.mobileSolutions {
-    display: none;
-}
+    .mobileSolutions {
+        display: none;
+    }
 
-@media (max-width: 1500px) {
-  .solutionsDesktop {
-     display: none;
-  }
-  .mobileSolutions {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      background-image: url("/assets/flowers.jpg");
-      background-size: 100%;
-      background-position: center;
-      min-height: 500px;
-      .solutionblock {
-          min-height: 500px;
+    @media (max-width: 1500px) {
+      .solutionsDesktop {
+         display: none;
+      }
+      .mobileSolutions {
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           justify-content: center;
           align-items: center;
-          .textSolutions {
+          background-image: url("/assets/flowers.jpg");
+          background-size: 100%;
+          background-position: center;
+          min-height: 500px;
+          .solutionblock {
               min-height: 500px;
               display: flex;
               flex-direction: column;
-              justify-content: space-around;
-              padding: 0 0 20px;
-              h3 {
-                  color: #fff;
-                  text-align: center;
-              }
-              p {
-                  color: #fff;
+              justify-content: center;
+              align-items: center;
+              .textSolutions {
+                  min-height: 500px;
+                  width: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-around;
+                  padding: 0 0 20px;
+                  h3 {
+                      width: 100%;
+                      font-weight: 600;
+                      text-transform: uppercase;
+                      font-size: 56px;
+                      text-align: center;
+                  }
+                  p {
+                      width: 100%;
+                      font-size: 34px;
+                      line-height: 2;
+                  }
               }
           }
-      }
-   }
-}
+       }
+    }
     @media (max-width: 1024px) {
         .mobileSolutions {
             display: flex;
@@ -225,8 +240,18 @@ export default {
             align-items: center;
             background-image: url("/assets/flowers.jpg");
             min-height: 500px;
-            background-size: 300%;
+            background-size: 500%;
             background-position: center;
+            h3 {
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 42px;
+                text-align: center;
+            }
+            p {
+                font-size: 28px;
+                line-height: 2;
+            }
         }
     }
 </style>

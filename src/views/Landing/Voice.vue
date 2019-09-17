@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <body class="nav-night frontpage">
             <sonarNav />
             <landingHero video="v2" title="Build a smarter, more efficient network." desktopBody="Sonar provides a straightforward solution to the growing complexities of telecoms. Keep things simple, and focus your efforts on growth." mobileBody="Sonar provides a straightforward solution to the growing complexities of telecoms. Keep things simple, and focus your efforts on growth." ctaBody="Book a demo" ctaPage="/demo" classNames="code bg-black color-white padding-xl-top padding-l-bottom" titleStyle="font-size: 3.7em; line-height: 1.05em" />
@@ -23,7 +22,6 @@
                 </div>
                 <landingDemoCards />
             </div>
-            <!--             <landingCaseForm style="padding-bottom: 200px" /> -->
             <landingCTA class="bg-black" showButton="true" imageSource="/assets/deviso.png" buttonClass="cta icon color-white download-cta" ctaClassNames="container-l bg-gradient color-white grid-2 center-y radius-m shadow-l padding-m-left strip-padding-tablet" title="Try Sonar today" subtitle="and discover the difference." button="Schedule a demo" buttonPage="demo" svgInfo="M13 0 C 20.18 0 26 5.82 26 13 C 26 20.18 20.18 26 13 26 C 5.82 26 0 20.18 0 13 C 0 5.82 5.82 0 13 0 Z M 12 16.586 L 9.739 14.325 C 9.349 13.935 8.716 13.935 8.325 14.325 C 7.935 14.716 7.935 15.349 8.325 15.739 L 12.285 19.699 C 12.485 19.9 12.75 19.997 13.012 19.992 C 13.275 19.997 13.539 19.9 13.739 19.699 L 17.699 15.739 C 18.09 15.349 18.09 14.716 17.699 14.325 C 17.309 13.935 16.675 13.935 16.285 14.325 L 14 16.61 L 14 7 C 14 6.448 13.552 6 13 6 C 12.448 6 12 6.448 12 7 Z" />
             <sonarFooter />
         </body>
@@ -34,12 +32,9 @@
 import sonarNav from "@/components/sonarNav.vue";
 import sonarFooter from "@/components/sonarFooter.vue";
 import landingHero from "@/components/landing/landingHero.vue";
-import landingLogos from "@/components/landing/landingLogos.vue";
-import landingQuote from "@/components/landing/landingQuote.vue";
 import landingFeature from "@/components/landing/landingFeature.vue";
 import landingCTA from "@/components/landing/landingCTA.vue";
 import landingDemoCards from "@/components/landing/landingDemoCards.vue";
-// import landingCaseForm from "@/components/landing/landingCaseForm.vue";
 import features from '@/components/home/features.vue';
 import landingCode from "@/components/landing/landingCode.vue";
 import landingCodeForm from "@/components/landing/landingCodeForm.vue";
@@ -51,10 +46,7 @@ export default {
         landingDemoCards,
         sonarFooter,
         landingHero,
-        landingLogos,
-        landingQuote,
         landingCTA,
-        // landingCaseForm,
         landingFeature,
         features,
         landingCode,

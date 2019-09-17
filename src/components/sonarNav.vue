@@ -1,12 +1,10 @@
 <template>
     <div>
-        <sonarNavSuper />
         <sonarNavDesktop />
         <sonarNavMobile />
     </div>
 </template>
 <script>
-import sonarNavSuper from './sonarNavSuper.vue'
 import sonarNavDesktop from './sonarNavDesktop.vue'
 import sonarNavMobile from './sonarNavMobile.vue'
 
@@ -15,7 +13,6 @@ export default {
     components: {
         sonarNavDesktop,
         sonarNavMobile,
-        sonarNavSuper
     },
     methods: {
         snrNav: function() {
@@ -129,7 +126,7 @@ nav {
     width: 100%;
     height: 100%;
     max-height: 60px;
-    top: 40px;
+    /*top: 40px;*/
     z-index: 900 !important;
     color: #000
 }
