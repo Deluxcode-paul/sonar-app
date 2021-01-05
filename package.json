@@ -10,7 +10,7 @@
   "dependencies": {
     "@clr/icons": "^2.1.0",
     "animated-number-vue": "^0.1.4",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "commander": "^2.20.0",
     "core-js": "^2.6.5",
     "intersection-observer": "^0.6.0",
