@@ -37,7 +37,7 @@
     "vue-single-select": "^1.0.29",
     "vue-star-rating": "^1.6.1",
     "vue2-animate": "^2.1.2",
-    "vuetify": "^2.0.15",
+    "vuetify": "^2.6.10",
     "vuex": "^3.0.1",
     "yargs": "^13.2.2"
   },
